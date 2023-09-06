@@ -11,15 +11,13 @@ function App() {
     const [app,dispatch] = useReducer(appReducer,appObject);
 
     return (
-
         <AppContext.Provider value={{app,dispatch}}>   
         <CharacterContext>
-            Here is content
-            <ChildComp/>
             <Navbar/>
-
-            <div className="tablet">
-                <AppRoutes/>
+            <div className="App">
+                <div className="tablet">
+                    <AppRoutes/>
+                </div>
             </div>
         </CharacterContext>
         </AppContext.Provider>
