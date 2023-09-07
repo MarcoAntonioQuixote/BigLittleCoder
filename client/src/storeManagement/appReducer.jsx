@@ -15,7 +15,12 @@ const appReducer = (state,action) => {
             movement.unshift(movement[0]);
             movement.pop();
             break;
+        case 'selectMonster':
+            newState.monster.name = payload;
+            break;
+        
     }
+    console.log({newState});
     return newState;
 }
 

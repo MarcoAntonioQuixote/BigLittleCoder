@@ -1,6 +1,6 @@
 import { useReducer } from 'react'
 import './styles/App.css';
-import ChildComp from './components/ChildComp';
+import ChildComp from './components/CharacterSelect';
 import {AppContext, appObject} from './storeManagement/AppContext'
 import appReducer from './storeManagement/appReducer';
 import { CharacterProvider as CharacterContext } from './storeManagement/CharacterContext';
@@ -14,7 +14,7 @@ function App() {
         <AppContext.Provider value={{app,dispatch}}>   
         <CharacterContext>
             <Navbar/>
-            <div className="App">
+            <div className="App" >
                 <div className="tablet">
                     <AppRoutes/>
                 </div>

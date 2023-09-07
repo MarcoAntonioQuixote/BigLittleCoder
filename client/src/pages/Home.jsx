@@ -1,9 +1,17 @@
 import React from 'react'
+import CharacterSelect from '../components/CharacterSelect';
 
 function Home() {
     return (
-        <div>On Home Page</div>
+        <div>
+            <CharacterSelect/>
+        </div>
     )
 }
 
-export default Home
+export default Home;
+
+/*
+    Character selection
+    Button
+*/
