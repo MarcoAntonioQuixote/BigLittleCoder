@@ -26,18 +26,14 @@ function CharacterSelect() {
     const toggleSelection = (goRight) => {
         let newIndex;
         if (goRight) {
-            newIndex = index === names.length-1 ? 0 : index + 1;
-        } else {
             newIndex = index === 0 ? names.length-1 : index - 1;
+        } else {
+            newIndex = index === names.length-1 ? 0 : index + 1;
         }
         setIndex(newIndex);
         let payload = names[newIndex];
         dispatch({type: 'selectMonster', payload})
     }
-
-    useEffect(() => {
-        console.log(characters);
-    }, [characters])
 
     return (
     <>

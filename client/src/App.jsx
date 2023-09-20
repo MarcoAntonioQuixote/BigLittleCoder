@@ -6,6 +6,9 @@ import appReducer from './storeManagement/appReducer';
 import { CharacterProvider as CharacterContext } from './storeManagement/CharacterContext';
 import AppRoutes from './components/AppRoutes';
 import Navbar from './components/Navbar';
+import TheScene from './components/3D/TheScene';
+import Monster from './components/3D/Monster';
+import StateInfo from './components/StateInfo';
 
 function App() {
     const [app,dispatch] = useReducer(appReducer,appObject);
@@ -14,11 +17,15 @@ function App() {
         <AppContext.Provider value={{app,dispatch}}>   
         <CharacterContext>
             <Navbar/>
-            <div className="App" >
+            <TheScene>
+                <Monster/>
+            </TheScene>
+            {/* <div className="App" >
                 <div className="tablet">
                     <AppRoutes/>
                 </div>
-            </div>
+            </div> */}
+            <StateInfo />
         </CharacterContext>
         </AppContext.Provider>
     )

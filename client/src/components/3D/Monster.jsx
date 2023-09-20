@@ -1,28 +1,32 @@
 import { useAnimations, useGLTF } from '@react-three/drei';
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
+import { randomNum } from '../../utilities/mathFunctions';
+import { CharacterContext } from '../../storeManagement/CharacterContext';
+import { AppContext } from '../../storeManagement/AppContext';
 
-function Monster({monster, name}) {
-
-    const {animations} = useGLTF('/monsters.gltf');
-    const {actions} = useAnimations(animations,monster);
+function Monster() {
     
-    let movements = ['Idle', 'Jump', 'Run', 'Run_Wild', 'Trot', 'Turn', 'Turntable'];
-    let index = randomNum(0, movements.length-1);
+    const {app} = useContext(AppContext);
+    const {characters} = useContext(CharacterContext);
+    let {name,move} = app.monster;
+    const moves = app.load.moves;
+    const monster = characters[name];
 
-    let action = actions[`Rig.${name}|${movements[index]}`];
+    if (!monster) return
+
+    const {nodes, animations} = useGLTF('/monsters.gltf');
+    let re3D = nodes[`Rig${name}`];
+    const {actions} = useAnimations(animations,re3D);
+    let action = actions[`Rig.${name}|${move}`];
     action.play();
+
+    //Notes: I have the monster saved in Characters; but I'm not actually using their rig. Monsters are saved as objects with actions and rig (rig works, but actions doesn't) - to get actions to work I have to re-grab the rig from nodes above. So notice that below you are using both.
 
     return (
         <>
-            <primitive object={monster} scale={[1,1,1]} position={[0,-3,0]}/>
+            <primitive object={monster.rig} scale={[.5,.5,.5]} position={[0,-2,0]}/>
         </>
     )
 }
 
 export default Monster
-
-function randomNum(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); 
-}

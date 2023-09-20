@@ -5,30 +5,10 @@ import { AppContext } from "./AppContext";
 const CharacterContext = createContext(null);
 
 const CharacterProvider = ({children}) => {
-
-    const {dispatch} = useContext(AppContext);
-
-    const {nodes, animations} = useGLTF('/monsters.gltf');
-
     const [characters,setCharacters] = useState({});
-
-    useEffect(() => {
-        let all = {
-            Bunny: nodes[`RigBunny`],
-            Toad: nodes[`RigToad`],
-            Vulpes: nodes[`RigVulpes`],
-            Fish: nodes[`RigFish`],
-            Tortoise: nodes[`RigTortoise`],
-            Cardinal: nodes[`RigCardinal`],
-        };
-        setCharacters(all);
-
-    }, [nodes]);
-
-
     return (
     <>
-        <CharacterContext.Provider value={{characters,animations}}>
+        <CharacterContext.Provider value={{characters,setCharacters}}>
             {children} 
         </CharacterContext.Provider>
     </>

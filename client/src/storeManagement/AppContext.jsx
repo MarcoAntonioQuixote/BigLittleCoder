@@ -6,7 +6,12 @@ export const appObject =
 {
     powersOn: true,
     movement: [],
+    load: {
+        characters: ['Bunny','Vulpes','Cardinal','Fish','Tortoise','Toad'],
+        moves: ['Idle', 'Jump', 'Run', 'Run_Wild', 'Trot', 'Turn', 'Turntable'],
+    },
     monster: {
-        name: 'Bunny'
+        name: 'Vulpes',
+        move: 'Turntable'
     }
 };
