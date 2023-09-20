@@ -11,14 +11,14 @@ import Monster from './components/3D/Monster';
 import StateInfo from './components/StateInfo';
 
 function App() {
-    const [app,dispatch] = useReducer(appReducer,appObject);
+    const [app,setApp] = useReducer(appReducer,appObject);
 
     return (
-        <AppContext.Provider value={{app,dispatch}}>   
+        <AppContext.Provider value={{app,setApp}}>   
         <CharacterContext>
             <Navbar/>
             <TheScene>
-                <Monster/>
+                <Monster key={app.monster.name}/>
             </TheScene>
             {/* <div className="App" >
                 <div className="tablet">

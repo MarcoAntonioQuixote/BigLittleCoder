@@ -1,13 +1,9 @@
-import React, { Suspense, useEffect, useContext, useRef, useState } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import GetModels from './GetModels';
-import { CharacterContext } from '../../storeManagement/CharacterContext';
-import Monster from './Monster';
 
 function TheScene({children}) {
-
-    const {characters} = useContext(CharacterContext);
 
     return (
     <div className='theScene'>
@@ -17,7 +13,6 @@ function TheScene({children}) {
             <Suspense fallback={null}>
                 <GetModels/>
                 {children}
-                {/* <Monster monster={characters[0]} name={name} /> */}
             </Suspense>
             <OrbitControls/>
         </Canvas>

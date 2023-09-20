@@ -18,6 +18,9 @@ const appReducer = (state,action) => {
         case 'selectMonster':
             newState.monster.name = payload;
             break;
+        case 'selectMove':
+            newState.monster.move = payload;
+            break;
         
     }
     console.log({newState});

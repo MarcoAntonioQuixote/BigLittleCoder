@@ -6,7 +6,7 @@ import TurnTable from './3D/TurnTable';
 
 function CharacterSelect() {
 
-    const {app,dispatch} = useContext(AppContext);
+    const {app,setApp} = useContext(AppContext);
     const [index,setIndex] = useState(null);
     const [names,setNames] = useState([]);
     const {characters} = useContext(CharacterContext);
@@ -32,7 +32,7 @@ function CharacterSelect() {
         }
         setIndex(newIndex);
         let payload = names[newIndex];
-        dispatch({type: 'selectMonster', payload})
+        setApp({type: 'selectMonster', payload})
     }
 
     return (
