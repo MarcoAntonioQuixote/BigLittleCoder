@@ -21,9 +21,17 @@
     height: 100vh;
 }
 
-.theScene {
-    border: solid white 2px;
-    height: 500px;
+.sceneContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
     position: fixed;
-    top: 30%;
+    top: 20%;
+    left: 0;
+}
+
+.theScene {
+    height: 30vh;
+    width: 80%;
+    max-width: 600px;
 }

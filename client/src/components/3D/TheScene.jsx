@@ -6,7 +6,7 @@ import Children from './Children';
 
 function TheScene() {
     return (
-        <Canvas className='canvas'>
+        <Canvas>
             <ambientLight/>
             <pointLight intensity={30} position={[-1,2,4]}/>
 

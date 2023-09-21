@@ -12,7 +12,7 @@ export const appObject =
     },
     monster: {
         name: 'Vulpes',
-        move: 'Turntable'
+        move: 'Idle'
     },
     scene:  {
         children: ['Monster'],

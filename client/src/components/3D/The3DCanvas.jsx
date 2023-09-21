@@ -8,8 +8,10 @@ function The3DCanvas() {
             <div className="theWorld">
                 <World/>
             </div>
-            <div className="theScene glass">
-                <TheScene />
+            <div className="sceneContainer">
+                <div className="theScene glass">
+                    <TheScene />
+                </div>
             </div>
         </div>
     )
