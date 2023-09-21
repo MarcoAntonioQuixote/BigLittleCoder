@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AppContext } from '../storeManagement/AppContext';
 import {CharacterContext} from '../storeManagement/CharacterContext';
 import { Button, Tooltip } from '@mui/material';
-import TurnTable from './3D/TurnTable';
+// import TurnTable from './3D/TurnTable';
 
 function CharacterSelect() {
 
@@ -37,11 +37,11 @@ function CharacterSelect() {
 
     return (
     <>
-        <div className='glassBox'>
+        <div>
             <Tooltip onClick={() => toggleSelection(true)} title={index === 0 ? names[names.length-1] : names[index]} variant='soft' placement='top' size='lg'>
                 <h2>{'<'}</h2>
             </Tooltip>
-            <TurnTable />
+            {/* <TurnTable /> */}
             <Tooltip onClick={() => toggleSelection(false)} title={index === names.length-1 ? names[0] : names[index+1]} variant='soft' placement='top' size='lg'>
                 <h2>{'>'}</h2>
             </Tooltip>

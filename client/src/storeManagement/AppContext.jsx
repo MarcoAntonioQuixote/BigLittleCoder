@@ -13,5 +13,9 @@ export const appObject =
     monster: {
         name: 'Vulpes',
         move: 'Turntable'
+    },
+    scene:  {
+        children: ['Monster'],
+        mode: 'Selection', //define all posible states?
     }
 };

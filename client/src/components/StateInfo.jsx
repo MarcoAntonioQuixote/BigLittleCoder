@@ -1,23 +1,30 @@
-import React, { useContext } from 'react'
-import { AppContext } from '../storeManagement/AppContext'
-import { CharacterContext } from '../storeManagement/CharacterContext';
+import React, { useContext } from 'react';
+import { AppContext } from '../storeManagement/AppContext';
 
 function StateInfo() {
 
     const {app, setApp} = useContext(AppContext);
 
-    const showCharacters = app.load.characters.map(c => <span onClick={() => setApp({type: 'selectMonster', payload: c})} key={c}> 🔘{c}</span>)
+    const showCharacters = app.load.characters.map(c => {
+        let style = app.monster.name === c ? {color: 'red'} : null;
+        return (
+            <span style={style} onClick={() => setApp({type: 'selectMonster', payload: c})} key={c}> 🔘{c}</span>
+        )
+    })
 
-    const showMoves = app.load.moves.map(m => <span onClick={() => setApp({type: 'selectMove', payload: m})} key={m}> 🔘{m}</span>)
+    const showMoves = app.load.moves.map(m => {
+        let style = app.monster.move === m ? {color: 'red'} : null;
+        return (
+            <span style={style} onClick={() => setApp({type: 'selectMove', payload: m})} key={m}> 🔘{m}</span>
+        )
+    })
 
     return (
         <div className='stateInfo'>
-            <h4 style={{color: 'red'}}>App Info:</h4>
+            <h2>App Info:</h2>
             Characters: {showCharacters}
             <br/>
             Moves: {showMoves}
-            <br/>
-            Current: {app.monster.name} : {app.monster.move}
         </div>
     )
 }

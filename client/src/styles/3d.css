@@ -3,12 +3,27 @@
     height: 30vh;
 }
 
-.theScene {
+.theCanvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    border: dashed white 2px;
+    border: dashed rgb(255, 36, 146) 4px;
+}
+
+.theWorld {
+    position: fixed;
     z-index: -10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.theScene {
+    border: solid white 2px;
+    height: 500px;
+    position: fixed;
+    top: 30%;
 }

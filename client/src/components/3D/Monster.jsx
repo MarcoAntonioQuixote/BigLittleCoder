@@ -20,7 +20,7 @@ function Monster() {
         setPrevMove(move);
         let action = actions[`Rig.${name}|${move}`];
         action.play();
-    },[move])
+    },[move]);
 
     //Notes: I have the monster saved in Characters; but I'm not actually using their rig. Monsters are saved as objects with actions and rig (rig works, but actions doesn't) - to get actions to work I have to re-grab the rig from nodes above. So notice that below you are using both.
 
