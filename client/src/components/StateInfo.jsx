@@ -11,7 +11,7 @@ function StateInfo() {
     const showMoves = app.load.moves.map(m => <span onClick={() => setApp({type: 'selectMove', payload: m})} key={m}> 🔘{m}</span>)
 
     return (
-        <div>
+        <div className='stateInfo'>
             <h4 style={{color: 'red'}}>App Info:</h4>
             Characters: {showCharacters}
             <br/>

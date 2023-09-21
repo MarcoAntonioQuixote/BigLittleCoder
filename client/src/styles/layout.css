@@ -1,0 +1,22 @@
+.tablet {
+    padding-top: 8%;
+    border: solid gold 2px;
+    height: 80%;
+    width: 80%;
+}
+
+#navLinks {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    border: solid green 5px;
+}
+
+#webLogo {
+    display: block;
+    margin: auto;
+    height: 15vh;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+}

@@ -1,5 +1,5 @@
 import { useReducer } from 'react'
-import './styles/App.css';
+import './styles/app.css';
 import ChildComp from './components/CharacterSelect';
 import {AppContext, appObject} from './storeManagement/AppContext'
 import appReducer from './storeManagement/appReducer';
@@ -17,9 +17,11 @@ function App() {
         <AppContext.Provider value={{app,setApp}}>   
         <CharacterContext>
             <Navbar/>
+            <div className='theScene'>
             <TheScene>
                 <Monster key={app.monster.name}/>
             </TheScene>
+            </div>
             {/* <div className="App" >
                 <div className="tablet">
                     <AppRoutes/>

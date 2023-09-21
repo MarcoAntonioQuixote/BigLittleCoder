@@ -1,0 +1,8 @@
+.glassBox {
+    border: solid white 2px;
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
