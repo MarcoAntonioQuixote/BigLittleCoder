@@ -11,13 +11,10 @@ export const appObject =
         moves: ['Idle', 'Jump', 'Run', 'Run_Wild', 'Trot', 'Turn', 'Turntable'],
     },
     monster: {
-        name: 'Vulpes',
+        name: 'Bunny',
         move: 'Idle'
     },
-    scene:  {
-        children: ['Monster'], //the <ChildComp /> you want to render at the scene
-        mode: 'selection', //define all posible states?
-        //selection --> start --> 
-        instructions: 'Which Big Little Coder are You?',
-    }
+    mode: 'selection', //start
+    instructions: 'Which Big Little Coder are You?',
+    children: ['Monster']
 };

@@ -21,7 +21,7 @@ function StateInfo() {
 
     return (
         <div className='stateInfo'>
-            <h2>App Info:</h2>
+            <h2>App Info | Mode: {app.mode}</h2>
             Characters: {showCharacters}
             <br/>
             Moves: {showMoves}

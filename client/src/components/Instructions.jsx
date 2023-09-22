@@ -5,7 +5,7 @@ import { AppContext } from '../storeManagement/AppContext';
 function Instructions() {
 
     const {app} = useContext(AppContext);
-    const instructions = app.scene.instructions;
+    const instructions = app.instructions;
 
     useEffect(() => {
         console.log(instructions);
@@ -18,7 +18,7 @@ function Instructions() {
             <Typewriter
                 key={instructions}
                 words={[instructions]} 
-                typeSpeed={60}
+                typeSpeed={20}
             />
         </div>
     )

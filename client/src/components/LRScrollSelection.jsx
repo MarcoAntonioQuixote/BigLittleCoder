@@ -6,6 +6,9 @@ function LRScrollSelection({children}) {
 
     const {app,setApp} = useContext(AppContext);
     const selection = app.monster.name;
+    const mode = app.mode;
+
+    if (mode !== 'selection') return (<>{children}</>);
 
     const handleScroll = (goRight) => {
         let allC = app.load.characters;

@@ -24,8 +24,8 @@ const appReducer = (state,action) => {
             newState.monster.move = payload;
             break;
         case 'selectMode':
-            newState.scene.mode = payload;
-            newState.scene.instructions = getText(payload);
+            newState.mode = payload;
+            newState.instructions = getText(payload);
             break;
     }
     return newState;

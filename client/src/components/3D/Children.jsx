@@ -5,7 +5,7 @@ import childrenMap from './allSceneChildren';
 function Children() {
 
     const {app} = useContext(AppContext);
-    const children = app.scene.children;
+    const children = app.children;
 
     const showChildren = children.map((child) => {
         const Component = childrenMap[child];
