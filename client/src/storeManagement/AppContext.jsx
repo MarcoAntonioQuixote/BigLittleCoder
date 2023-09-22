@@ -4,6 +4,7 @@ export const AppContext = createContext(null);
 
 export const appObject = 
 {
+    selected: false,
     powersOn: true,
     movement: [],
     load: {

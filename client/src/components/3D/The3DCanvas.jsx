@@ -32,7 +32,7 @@ function The3DCanvas() {
                 <div className={layout}>
                     <Instructions />
                     <TheScene />
-                    {app.started && <SpeakerWindow />}
+                    {app.selected && <SpeakerWindow />}
                 </div>
                 </LRScrollSelection>
             </div>

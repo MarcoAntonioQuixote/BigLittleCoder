@@ -8,7 +8,7 @@ function Projects() {
     const showProjects = projects.map(p => <ProjectCard project={p} key={p.name}/>)
 
     return (
-        <div>
+        <div className='page'>
             Your projects here
             {showProjects}
         </div>

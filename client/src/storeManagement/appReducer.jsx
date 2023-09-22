@@ -25,7 +25,6 @@ const appReducer = (state,action) => {
             break;
         case 'selectMode':
             newState.mode = payload;
-            newState.instructions = payload;
             if (payload === 'start') {
                 let others = load.characters.filter(c => c !== monster.name);
                 monster.others = shuffleArray(others);
@@ -39,8 +38,11 @@ const appReducer = (state,action) => {
                     name: monster.others[0]
                 }; //I don't like this structure - clean it up
                 children.push(other);
-                newState.started = true;
+                newState.selected = true;
             }
+            break;
+        case 'setInstructions':
+            newState.instructions = payload;
             break;
     }
     return newState;

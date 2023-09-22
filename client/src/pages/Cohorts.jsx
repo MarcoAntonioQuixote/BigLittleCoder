@@ -2,7 +2,9 @@ import React from 'react'
 
 function Cohorts() {
     return (
-        <div>Check out these Cohorts</div>
+        <div className='page'>
+            Check out these Cohorts
+        </div>
     )
 }
 

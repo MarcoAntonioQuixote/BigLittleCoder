@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { AppContext } from '../storeManagement/AppContext';
-import getText from '../utilities/instructions';
+import useInstructions from '../hooks/useInstructions';
 
 function Instructions() {
-
+    useInstructions();
     const {app} = useContext(AppContext);
-    const instructions = getText(app.instructions);
 
-    let moveToBottom = app.started ? {top: '35vh'} : null;
+    let instructions = app.instructions;
+    let moveToBottom = app.selected ? {top: '35vh'} : null;
 
     if (!instructions) return null;
 
@@ -19,6 +19,7 @@ function Instructions() {
                 words={[instructions]} 
                 typeSpeed={20}
             />
+            
         </div>
     )
 }
