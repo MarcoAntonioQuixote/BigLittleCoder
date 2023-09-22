@@ -1,4 +1,4 @@
-import Monster from './Monster';
+import Monster from '../components/3D/Monster';
 
 const childrenMap = {
     Monster: Monster,

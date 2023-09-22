@@ -11,10 +11,14 @@ export const appObject =
         moves: ['Idle', 'Jump', 'Run', 'Run_Wild', 'Trot', 'Turn', 'Turntable'],
     },
     monster: {
-        name: 'Bunny',
+        name: 'Vulpes',
         move: 'Idle'
     },
-    mode: 'selection', //start
-    instructions: 'Which Big Little Coder are You?',
-    children: ['Monster']
+    mode: 'selection', //start (speaking), //miniatures
+    instructions: 'selection',
+    children: [
+        {type: 'user', component: 'Monster'} 
+    ]
+    //all will need a type, component and name (what about non-monsters children you display?)
 };
+

@@ -1,15 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { AppContext } from '../storeManagement/AppContext';
+import getText from '../utilities/instructions';
 
 function Instructions() {
 
     const {app} = useContext(AppContext);
-    const instructions = app.instructions;
-
-    useEffect(() => {
-        console.log(instructions);
-    }, [instructions])
+    const instructions = getText(app.instructions);
 
     if (!instructions) return null;
 

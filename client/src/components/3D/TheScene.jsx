@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Grid, OrbitControls } from '@react-three/drei';
 import GetModels from './GetModels';
-import Children from './Children';
+import SceneActors from './SceneActors';
 
 function TheScene() {
     return (
@@ -13,7 +13,7 @@ function TheScene() {
 
             <Suspense fallback={null}>
                 <GetModels/>
-                <Children />
+                <SceneActors />
             </Suspense>
             <OrbitControls/>
             <Grid />
