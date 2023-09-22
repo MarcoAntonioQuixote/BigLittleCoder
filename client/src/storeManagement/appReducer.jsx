@@ -1,3 +1,5 @@
+import getText from "../assets/instructions";
+
 const appReducer = (state,action) => {
     let newState = {...state};
     let {movement} = newState;
@@ -21,9 +23,11 @@ const appReducer = (state,action) => {
         case 'selectMove':
             newState.monster.move = payload;
             break;
-        
+        case 'selectMode':
+            newState.scene.mode = payload;
+            newState.scene.instructions = getText(payload);
+            break;
     }
-    console.log({newState});
     return newState;
 }
 

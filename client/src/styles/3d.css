@@ -28,10 +28,35 @@
     position: fixed;
     top: 20%;
     left: 0;
+    align-items: center;
 }
 
 .theScene {
     height: 30vh;
     width: 80%;
     max-width: 600px;
+    position: relative;
+    /* display: flex; */
+}
+
+.instructions {
+	/* border: solid red 2px; */
+    padding-top: 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: solid red 2px;
 }

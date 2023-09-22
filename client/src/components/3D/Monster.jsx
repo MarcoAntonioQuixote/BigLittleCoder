@@ -26,7 +26,11 @@ function Monster() {
 
     return (
         <>
-            <primitive object={monster.rig} scale={[.5,.5,.5]} position={[0,-2,0]}/>
+            <primitive 
+                object={monster.rig} 
+                scale={[.5,.5,.5]} 
+                position={[0,-1,0]}
+            />
         </>
     )
 }

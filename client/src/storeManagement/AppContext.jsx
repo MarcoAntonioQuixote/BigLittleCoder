@@ -7,7 +7,7 @@ export const appObject =
     powersOn: true,
     movement: [],
     load: {
-        characters: ['Bunny','Vulpes','Cardinal','Fish','Tortoise','Toad'],
+        characters: ['Vulpes','Bunny','Cardinal','Fish','Tortoise','Toad'],
         moves: ['Idle', 'Jump', 'Run', 'Run_Wild', 'Trot', 'Turn', 'Turntable'],
     },
     monster: {
@@ -15,7 +15,9 @@ export const appObject =
         move: 'Idle'
     },
     scene:  {
-        children: ['Monster'],
-        mode: 'Selection', //define all posible states?
+        children: ['Monster'], //the <ChildComp /> you want to render at the scene
+        mode: 'selection', //define all posible states?
+        //selection --> start --> 
+        instructions: 'Which Big Little Coder are You?',
     }
 };
