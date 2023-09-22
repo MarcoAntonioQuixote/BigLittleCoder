@@ -1,10 +1,12 @@
 import React from 'react'
-import CharacterSelect from '../components/CharacterSelect';
 
 function Home() {
+
+    console.log('rendered home!');
+
     return (
         <div>
-            <CharacterSelect/>
+            HOME!!!
         </div>
     )
 }

@@ -17,11 +17,7 @@ function App() {
             <Navbar/>
             <The3DCanvas />
             <StateInfo />
-            {/* <div className="App" >
-                <div className="tablet">
-                    <AppRoutes/>
-                </div>
-            </div> */}
+            <AppRoutes />
         </CharacterContext>
         </AppContext.Provider>
     )

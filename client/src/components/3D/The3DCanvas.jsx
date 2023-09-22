@@ -20,6 +20,8 @@ function The3DCanvas() {
             break;
     }
 
+    //REALLY GOOD CHANCE theCANVAS IS NOT NEEDED... TESTING WITHOUT
+
     return (
         <div className='theCanvas'>
             <div className="theWorld">

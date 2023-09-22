@@ -1,8 +1,6 @@
 import React, { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom';
 import webHeader from '../assets/bigLittleCoder.png'
-import { AppContext } from '../storeManagement/AppContext';
-
 
 function Navbar() {
 
@@ -11,16 +9,19 @@ function Navbar() {
 
     function SpecialLink({link}) {
         let path = decodeURIComponent(location.pathname);
-        path = path === "/" ? '/Big Little Coder' : path;
-        let special = `/${link}` === path ? 'navFocus' : 'navNoFocus';
-        
+        let defPath = path === "/" ? '/Big Little Coder' : path;
+        let focus = `/${link}` === defPath ? 'navFocus' : 'navNoFocus';
         let split = [...link];
+    
         const showSplit = split.map((letter,i) =>         
             <span key={i} style={{'--i': i}} >{letter}</span>
         )
 
+        link = link === 'Big Little Coder' ? '/' : link;
+        link = link === 'Mark Anthony' ? 'MarkAnthony' : link;
+
         return (
-            <Link to={link} className={special}>
+            <Link to={link} className={focus}>
                 <h2 >
                     {showSplit}
                 </h2>

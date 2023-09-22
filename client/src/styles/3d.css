@@ -1,16 +1,10 @@
-.turntable {
-    width: 100%;
-    height: 30vh;
-}
-
-.theCanvas {
+/* .theCanvas {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    border: dashed rgb(255, 36, 146) 4px;
-}
+} */
 
 .theWorld {
     position: fixed;
@@ -19,6 +13,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
+    pointer-events: auto;
 }
 
 .sceneContainer {
@@ -29,6 +24,7 @@
     top: 20%;
     left: 0;
     align-items: center;
+    /* border: solid red 2px; */
 }
 
 .theScene {
@@ -36,7 +32,6 @@
     height: 30vh;
     width: 80%;
     max-width: 600px;
-    /* border: solid red 2px; */
 }
 
 .expandedScene {
