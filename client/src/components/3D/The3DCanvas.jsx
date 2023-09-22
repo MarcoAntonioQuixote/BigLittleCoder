@@ -4,6 +4,7 @@ import TheScene from './TheScene'
 import Instructions from '../Instructions';
 import LRScrollSelection from '../LRScrollSelection';
 import { AppContext } from '../../storeManagement/AppContext';
+import SpeakerWindow from '../SpeakerWindow';
 
 function The3DCanvas() {
 
@@ -29,6 +30,7 @@ function The3DCanvas() {
                 <div className={layout}>
                     <Instructions />
                     <TheScene />
+                    {app.started && <SpeakerWindow />}
                 </div>
                 </LRScrollSelection>
             </div>

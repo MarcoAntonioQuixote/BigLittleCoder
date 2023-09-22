@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { useAnimations, useGLTF } from '@react-three/drei';
 import { CharacterContext } from '../../storeManagement/CharacterContext';
 import { AppContext } from '../../storeManagement/AppContext';
@@ -19,17 +19,7 @@ function Monster({info}) {
     const {actions} = useAnimations(animations,model);
     const action = actions[`Rig.${name}|${move}`];
 
-    // const [prevMove, setPrevMove] = useState(move);
-
-    // useEffect(() => {
-
-    // },[])
-
-    
-    // const {characters} = useContext(CharacterContext);
-
-    // const [prevMove, setPrevMove] = useState(move);
-
+    action.play();
 
     // useEffect(() => {
     //     let prevAction = actions[`Rig.${name}|${prevMove}`];

@@ -8,15 +8,14 @@ function TheScene() {
     return (
         <Canvas>
             <ambientLight intensity={1.8}/>
-            {/* <pointLight intensity={50} position={[3,0,0]}/> */}
             <pointLight intensity={15} position={[-1,2,4]}/>
 
             <Suspense fallback={null}>
                 <GetModels/>
                 <SceneActors />
             </Suspense>
-            <OrbitControls/>
-            <Grid />
+            {/* <OrbitControls/> */}
+            {/* <Grid /> */}
         </Canvas>
     )
 }

@@ -8,10 +8,12 @@ function Instructions() {
     const {app} = useContext(AppContext);
     const instructions = getText(app.instructions);
 
+    let moveToBottom = app.started ? {top: '35vh'} : null;
+
     if (!instructions) return null;
 
-    return (
-        <div className="instructions">
+    return (    
+        <div className="instructions" style={moveToBottom}>
             <Typewriter
                 key={instructions}
                 words={[instructions]} 

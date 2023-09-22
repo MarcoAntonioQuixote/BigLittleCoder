@@ -6,6 +6,7 @@ export const appObject =
 {
     powersOn: true,
     movement: [],
+    currentPage: 'Big Little Coder',
     load: {
         characters: ['Vulpes','Bunny','Cardinal','Fish','Tortoise','Toad'],
         moves: ['Idle', 'Jump', 'Run', 'Run_Wild', 'Trot', 'Turn', 'Turntable'],

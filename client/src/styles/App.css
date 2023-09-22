@@ -12,7 +12,6 @@ body {
 	background-color: #242424;
 	display: flex;
 	text-align: center;
-	border: solid blue 2px;
 }
 
 .stateInfo {

@@ -20,3 +20,10 @@
     transform: translateX(-50%);
     z-index: 1;
 }
+
+#navLinks {
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+    z-index: 10;
+}
