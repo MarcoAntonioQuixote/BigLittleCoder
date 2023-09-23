@@ -9,14 +9,14 @@ import SpeakerWindow from '../SpeakerWindow';
 function The3DCanvas() {
 
     const {app} = useContext(AppContext);
-    const {mode} = app;
+    const {status} = app;
 
     let layout;
 
-    switch(mode) {
+    switch(status.mode) {
         case 'selection': layout = 'theScene glass';
             break;
-        case 'start': layout = 'expandedScene';
+        case 'speaker': layout = 'expandedScene';
             break;
     }
 
@@ -32,7 +32,7 @@ function The3DCanvas() {
                 <div className={layout}>
                     <Instructions />
                     <TheScene />
-                    {app.selected && <SpeakerWindow />}
+                    {app.status.started && <SpeakerWindow />}
                 </div>
                 </LRScrollSelection>
             </div>

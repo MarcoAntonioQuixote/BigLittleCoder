@@ -4,7 +4,19 @@ export const AppContext = createContext(null);
 
 export const appObject = 
 {
-    selected: false,
+    status: {
+        mode: 'selection', //(speaker)
+        started: false, //selected (passed selection mode)
+        transitioning: false,
+        next: null,
+    },
+    assigned: [
+        { page: "", speaker: null },
+        { page: "Cohorts", speaker: null },
+        { page: "1-on-1", speaker: null },
+        { page: "Projects", speaker: null },
+        { page: "MarkAnthony", speaker: null }
+    ],
     powersOn: true,
     movement: [],
     load: {
@@ -15,10 +27,9 @@ export const appObject =
         name: 'Vulpes',
         move: 'Idle'
     },
-    mode: 'selection', //start (speaking), //miniatures
     instructions: 'selection',
     children: [
-        {type: 'user', component: 'Monster'} 
+        {type: 'select', component: 'Monster'} 
     ]
     //all will need a type, component and name (what about non-monsters children you display?)
 };

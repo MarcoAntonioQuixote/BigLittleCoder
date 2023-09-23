@@ -18,7 +18,7 @@ function SpecialLink({link}) {
 
     link = link === 'Big Little Coder' ? '/' : link;
     link = link === 'Mark Anthony' ? 'MarkAnthony' : link;
-    link = app.selected ? link : null;
+    link = app.status.started ? link : null;
 
     return (
     <>
@@ -27,7 +27,7 @@ function SpecialLink({link}) {
                 {showSplit}
             </h2>
         </Link>
-        {!app.selected && <LinkModal open={open} setOpen={setOpen} />}
+        {!app.status.started && <LinkModal open={open} setOpen={setOpen} />}
     </>  
     )
 }

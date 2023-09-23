@@ -9,7 +9,7 @@ function xyzPlacement(type) {
         case 'speaker':
             placement = {
                 scale: [.2,.2,.2],
-                position: [-5,0,-3],
+                position: [-10,0,-3], //[-5,0,-3] STARTING POSITIONS!
                 rotation: [Math.PI / 2,Math.PI,4]
             }
             break;

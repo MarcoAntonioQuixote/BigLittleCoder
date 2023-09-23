@@ -8,7 +8,7 @@ function Instructions() {
     const {app} = useContext(AppContext);
 
     let instructions = app.instructions;
-    let moveToBottom = app.selected ? {top: '35vh'} : null;
+    let moveToBottom = app.status.started ? {top: '35vh'} : null;
 
     if (!instructions) return null;
 
