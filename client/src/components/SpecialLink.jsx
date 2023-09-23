@@ -8,16 +8,25 @@ function SpecialLink({link}) {
     const [open, setOpen] = useState(false);
     const location = useLocation();
     let path = decodeURIComponent(location.pathname);
-    let defPath = path === "/" ? '/Big Little Coder' : path;
-    let focus = `/${link}` === defPath ? 'navFocus' : 'navNoFocus';
+    switch(path) {
+        case '/': path = '/Big Little Coder'
+            break;
+        case '/MarkAnthony': path = '/Mark Anthony'
+            break;
+    }
+
+    let focus = `/${link}` === path ? 'navFocus' : 'navNoFocus';
     let split = [...link];
 
     const showSplit = split.map((letter,i) =>         
         <span key={i} style={{'--i': i}} >{letter}</span>
     )
-
-    link = link === 'Big Little Coder' ? '/' : link;
-    link = link === 'Mark Anthony' ? 'MarkAnthony' : link;
+    switch(link) {
+        case 'Big Little Coder': link = '/'
+            break;
+        case 'Mark Anthony': link = 'MarkAnthony'
+            break;
+    }
     link = app.status.started ? link : null;
 
     return (

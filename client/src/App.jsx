@@ -16,7 +16,7 @@ function App() {
         <CharacterContext>
             <Navbar/>
             <The3DCanvas />
-            <StateInfo />
+            {/* <StateInfo /> */}
             {/* <AppRoutes /> VERY INTERESTING, I HAVE THIS NESTED IN THE COMPONENT THAT I WANT THESE PAGES TO RENDER IN! 😲🤯 */}
         </CharacterContext>
         </AppContext.Provider>
