@@ -19,32 +19,27 @@ function Monster({info}) {
 
     const ref = useRef();
     let targetX = -5; //DEFINE THIS SOMEWHERE ELSE
+    let offStage = -10; //Define Somewhere else too! xyz placement ??
 
     useFrame(() => {
         if (type === 'select' || type === 'userBack') return;
-        if (app.status.transitioning) {            
-            ref.current.position.x += (targetX - ref.current.position.x) * 0.05;
-            if (ref.current.position.x >= targetX - 0.05) {
-                console.log('transition done!')
-                setApp({type: 'transition', payload: false})
+        if (app.status.transitioning) {
+            let position = ref.current.position;
+            let outgoing = app.children[1].name;
+            let incoming = app.status.next.speaker;  
+            if (outgoing !== incoming) {
+                position.x -= (targetX - position.x) * 0.05;
+                if (position.x < offStage) {
+                    setApp({type: 'transition', payload: {bringNext: true, inProgress: true}})
+                }
+            } else {
+                position.x += (targetX - position.x) * 0.05;
+                if (position.x >= targetX - 0.05) { //on trans in
+                    setApp({type: 'transition', payload: {inProgress: false}})
+                }
             }
         }
-
-        // if (ref.current) {
-        // }
     });
-    
-
-    // useEffect(() => {
-    //     let prevAction = actions[`Rig.${name}|${prevMove}`];
-    //     prevAction.stop();
-    //     setPrevMove(move);
-    //     let action = actions[`Rig.${name}|${move}`];
-    //     action.play();
-
-    //     let vAction = vActions[`Rig.Vulpes|Idle`];
-    //     vAction.play();
-    // },[move]);
 
     //Notes: I have the monster saved in Characters; but I'm not actually using their rig. Monsters are saved as objects with actions and rig (rig works, but actions doesn't) - to get actions to work I have to re-grab the rig from nodes above. So notice that below you are using both.                 position={[0,-1,0]}
 

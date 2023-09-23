@@ -20,13 +20,14 @@
 
 .navFocus {
     color: transparent;
+    color: white;
 }
 
-.navFocus span {
+/* .navFocus span {
     animation: animate 5s linear infinite;
     animation-delay: calc(0.1s * var(--i)) ;
     text-decoration: underline;
-}
+} */
 
 .navNoFocus {
     text-decoration: none;

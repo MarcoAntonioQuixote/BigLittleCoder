@@ -41,8 +41,6 @@ const appReducer = (state,action) => {
                 status.started = true;
                 newState.assigned = newState.assigned.map((c,i) => ({...c, speaker: monster.others[i]}));
                 status.transitioning = true;
-                // transition.inProgress = true;
-                // console.log('here? should be true!', transition)
             }
             break;
         case 'setInstructions':
@@ -51,33 +49,18 @@ const appReducer = (state,action) => {
         case 'goToPage':
             let newMon = newState.assigned.find(a => a.page === payload);
             status.next = newMon;
-            
+            status.transitioning = true;
             break;
         case 'transition':
-            status.transitioning = payload;
-            if (payload === false) {
-                console.log('AND when should this work!!?!');
-                console.log(newState);
-                
+            //payload will need to specify 2 things: 1) that the transition is starting or finalizing and 2) that the transition has reached the halfway point, so the new monster needs to be converted to a child component; payload.inProgress, payload.bringNext
+            status.transitioning = payload.inProgress;
+            if (payload.bringNext) {
+                console.log(status.next);
+                console.log(children[1]);
+                children[1] = {...children[1], name: status.next.speaker};
             }
-            // if (payload === true) {
-            //     console.log('transitioning!')
-            // } else {
-            //     console.log('finished transition!');
-            // }
-            // if (payload === false) {
-                //     newState.children[1] = {...newState.children[1], name: transition.next.speaker};
-                // }
-                // console.log('transitioning');
-                break;
+            break;
         }
-        // console.log({type},console.log(JSON.parse(JSON.stringify(newState))));
-        // if (newState.transition.inProgress) {
-        //     console.log('transitioning!')
-        // } else {
-        //     console.log('finished transitioning or (not)');
-        // }
-        console.log({type})
         return newState;
 }
 

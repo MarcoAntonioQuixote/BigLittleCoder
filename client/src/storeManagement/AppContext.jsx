@@ -25,12 +25,15 @@ export const appObject =
     },
     monster: {
         name: 'Vulpes',
-        move: 'Idle'
+        move: 'Idle',
+        others: null,
     },
     instructions: 'selection',
     children: [
         {type: 'select', component: 'Monster'} 
     ]
     //all will need a type, component and name (what about non-monsters children you display?)
+
+    //It's easier to clean up state when you have ALL of the values and sub properties defined here
 };
 
