@@ -1,33 +1,13 @@
-.scrollButton {
-    height: 250px;
-}
-
-#scrollSelect {
-    position: absolute;
-    bottom: 50px;
-}
-
-.speakerWindow {
-    position: fixed;
-    top: 20vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80vw;
-    height: 40vh;
-    border-radius: 16px;
-    /* z-index: -1; */
-}
-
 .navFocus {
     color: transparent;
     color: white;
 }
 
-/* .navFocus span {
-    animation: animate 5s linear infinite;
-    animation-delay: calc(0.1s * var(--i)) ;
+.navFocus span {
+    /* animation: animate 5s linear infinite;
+    animation-delay: calc(0.1s * var(--i)) ; */
     text-decoration: underline;
-} */
+}
 
 .navNoFocus {
     text-decoration: none;
@@ -58,18 +38,4 @@
         box-shadow: none;
         /* filter: blur(1px) hue-rotate(0deg); */
     }
-}
-
-.modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 400px;
-    border: 2px solid #000;
-    border-radius: 16px;
-    background-color: rgb(19, 9, 46);
-    box-shadow: 24;
-    padding: 40px;
-    color: white;
 }

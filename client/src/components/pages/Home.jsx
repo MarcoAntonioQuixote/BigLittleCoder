@@ -1,5 +1,5 @@
 import React from 'react';
-import HoverCard from '../components/HoverCard';
+import HoverCard from '../HoverCard';
 
 function Home() {
 
@@ -8,11 +8,11 @@ function Home() {
 
     let paths = [];
     for (let x = 1; x <= 4; x++) {
-        paths.push(`../../public/gifs/coder${x}.gif`);
+        paths.push(`/gifs/coder${x}.gif`);
     }
 
     return (
-        <div className='page centerOnPage'>
+        <div className='pageInSpeakerWindow centerOnPage'>
             <HoverCard info={{image: paths[0]}} />
         </div>
     )

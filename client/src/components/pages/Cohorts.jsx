@@ -2,7 +2,7 @@ import React from 'react'
 
 function Cohorts() {
     return (
-        <div className='page'>
+        <div className='pageInSpeakerWindow'>
             Check out these Cohorts
         </div>
     )

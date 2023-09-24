@@ -5,6 +5,7 @@ import SpecialLink from './SpecialLink';
 function Navbar() {
     const links = ['Big Little Coder','Cohorts','1-on-1','Projects','Mark Anthony'];
 
+    /* TODO: Make Nav Bar On Smaller Devices, px threshold?? 800 */
     return (
     <div>
         <img src={webHeader} alt="Big Little Coder Logo" id="webLogo" />        

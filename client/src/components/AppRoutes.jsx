@@ -1,10 +1,11 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from '../pages/Home';
-import OneOnOne from '../pages/OneOnOne';
-import Cohorts from '../pages/Cohorts';
-import Projects from '../pages/Projects';
-import MarkAnthony from '../pages/MarkAnthony';
+
+import OneOnOne from './pages/OneOnOne';
+import Cohorts from './pages/Cohorts';
+import Projects from './pages/Projects';
+import MarkAnthony from './pages/MarkAnthony';
+import Home from './pages/Home';
 
 function AppRoutes() {
     return (

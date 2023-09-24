@@ -29,7 +29,7 @@ function OneOnOne() {
     let children = [a,c,b];
 
     return (
-        <div className='page aroundOnPage'>
+        <div className='pageInSpeakerWindow aroundOnPage'>
             {children.map(c => c)}
         </div>
     )

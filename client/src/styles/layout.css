@@ -1,58 +1,54 @@
-.tablet {
-    padding-top: 8%;
-    border: solid gold 2px;
-    height: 80%;
+.theWorld {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: auto;
+}
+
+.sceneContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    align-items: center;
+    font-size: 2rem;
+    /* border: solid red 4px; */
+}
+
+.canvas {
+    border: solid pink 2px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.smScene {
+    border-radius: 16px;
+    height: 30vh;
     width: 80%;
+    max-width: 600px;
+    border: solid 2px green;
 }
 
-#navLinks {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
+.expandedScene {
+    border-radius: 16px;
+    width: 100vw;
+    height: 80vh;
+    /* pointer-events: none; */
+    /* border: solid red 2px; */
+    border: solid 6px green;
 }
 
-#webLogo {
-    display: block;
-    margin: auto;
-    height: 15vh;
-    position: fixed;
+.instructions {
+    padding-top: 20px;
+    position: absolute;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    border: solid white 2px;
     pointer-events: none;
-}
-
-#navLinks {
-    display: flex;
-    width: 70vw;
-    justify-content: space-between;
-    z-index: 1;
-    margin-left: 2vw;
-}
-
-.page {
-    font-weight: 100;
-    width: 80%;
-    min-width: 100%;
-    margin: auto;
-    margin-top: 5%;
-    display: flex;
-    /* border: solid green 2px; */
-}
-
-.centerOnPage {
-    justify-content: center;
-}
-
-.aroundOnPage {
-    justify-content: space-around;
-    /* border: solid gold 2px; */
-    flex-wrap: wrap;
-}
-
-.flexChild {
-    /* border: solid red 2px; */
-    height: 300px;
-    width: 300px;
-    margin: 15px;
 }

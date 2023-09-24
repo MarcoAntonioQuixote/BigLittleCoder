@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import { AppContext } from '../storeManagement/AppContext';
+import { AppContext } from '../../storeManagement/AppContext';
 
 function MarkAnthony() {
 
@@ -15,7 +15,7 @@ function MarkAnthony() {
     },[]);
 
     return (
-        <div className='page'>
+        <div className='pageInSpeakerWindow'>
         </div>
     )
 }

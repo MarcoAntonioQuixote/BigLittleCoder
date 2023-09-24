@@ -44,12 +44,12 @@ export const projects = [
         name: 'Explorio Party',
         tech: 'Socket.IO',
         link: 'https://explorioparty.netlify.app/',
-        image: '../../public/gifs/coder1.gif'
+        image: '/gifs/coder1.gif'
     },
     {
         name: 'React Hooks 101',
         tech: 'React',
         link: 'https://www.youtube.com/watch?v=dqg1HnF87Yw',
-        image: '../../public/gifs/coder1.gif'
+        image: '/gifs/coder1.gif'
     },
 ]

@@ -29,7 +29,7 @@ function The3DCanvas() {
         <div className="sceneContainer">
             <LRScrollSelection>
             <div className={layout}>
-                <Instructions />
+                {/* <Instructions /> */}
                 <TheScene />
                 {app.status.started && <SpeakerWindow />}
                 {app.status.started &&
