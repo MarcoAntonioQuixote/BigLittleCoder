@@ -1,4 +1,5 @@
 import React from 'react';
+import HoverCard from '../components/HoverCard';
 
 function Home() {
 
@@ -11,13 +12,8 @@ function Home() {
     }
 
     return (
-        <div className='page'>
-            <div className="gradHover">
-                <div className="gradHoverImg">
-                    <img src={paths[0]} alt="Some description" className='hoverImg' />
-                </div>
-                <h2 className="gradHoverText">Check</h2>
-            </div>
+        <div className='page centerOnPage'>
+            <HoverCard info={{image: paths[0]}} />
         </div>
     )
 }

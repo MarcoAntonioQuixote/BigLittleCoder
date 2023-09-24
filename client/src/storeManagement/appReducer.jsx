@@ -58,6 +58,9 @@ const appReducer = (state,action) => {
                 children[1] = {...children[1], name: status.next.speaker};
             }
             break;
+        case 'showBalls': 
+            newState.showBalls = payload; 
+
         }
         return newState;
 }

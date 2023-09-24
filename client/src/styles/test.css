@@ -1,53 +1,117 @@
-.hoverImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
 
-.gradHover {
-  background: #000;
-  background: -moz-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
-  background: -webkit-linear-gradient(-45deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
-  background: linear-gradient(135deg, #000000 0%, #000000 25%, #1e539e 50%, #ff3083 75%, #7800a8 100%);
-  background-size: 400% 400%;
-  background-repeat: no-repeat;
-  display: flex;
-  width: 500px;
-  height: 500px;
-  max-width: 100vw;
-  max-height: 100vh;
-  justify-content: center;
-  align-items: center;
+figure.snip0016 {
+  font-family: 'Raleway', Arial, sans-serif;
   color: #fff;
   position: relative;
-  cursor: pointer;
-  transition: .5s all;
+  /* width: 100vw; */
+  /* border: solid red 2px; */
+  /* overflow: hidden; */
+  margin: 10px;
+  /* min-width: 220px;
+  max-width: 310px;
+  max-height: 220px; */
+  /* width: 100%; */
+  background: #000000;
+  text-align: left;
 }
-
-.gradHoverImg {
+figure.snip0016 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip0016 img {
+  /* max-width: 100%; */
+  opacity: 1;
+  /* width: 100%; */
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip0016 figcaption {
   position: absolute;
+  bottom: 0;
   left: 0;
-  top: 0;
+  padding: 30px 3em;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  opacity: .5;
-  mix-blend-mode: screen;
 }
-
-.gradHoverText {
-  position: relative;
-  z-index: 10;
+figure.snip0016 figcaption::before {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  bottom: 30px;
+  left: 100%;
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0016 h2,
+figure.snip0016 p {
+  margin: 0 0 5px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s,-webkit-transform 0.35s,-moz-transform 0.35s,-o-transform 0.35s,transform 0.35s;
+}
+figure.snip0016 h2 {
+  font-size: 2.25rem;
+  font-weight: 300;
   text-transform: uppercase;
-  letter-spacing: .05em;
+  -webkit-transform: translate3d(30%, 0%, 0);
+  transform: translate3d(30%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip0016 h2 span {
+  font-weight: 800;
+}
+figure.snip0016 p {
+  font-weight: 200;
+  -webkit-transform: translate3d(0%, 30%, 0);
+  transform: translate3d(0%, 30%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip0016 div {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip0016:hover img {
+  opacity: 0.3;
+}
+figure.snip0016:hover figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+figure.snip0016:hover figcaption p {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0016:hover figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 }
 
-.gradHover:hover {
-  background-position: 100% 100%;
+.slideImg {
+  width: 25vw;
+  height: 15vh;
+  object-fit: cover;
+  border: solid red 2px;
 }
 
-.gradHover:hover .gradHoverText {
-  text-shadow: 0 0 20px rgba(0,0,0,1);
-}
-
-/* special thanks: https://codepen.io/jondaiello/pen/WGeNev */

@@ -4,7 +4,7 @@ import AppRoutes from './AppRoutes'
 function SpeakerWindow() {
 
     return (
-        <div className='speakerWindow glass'>
+        <div className='speakerWindow' id='copyGlass'>
             <AppRoutes/>
         </div>
     )

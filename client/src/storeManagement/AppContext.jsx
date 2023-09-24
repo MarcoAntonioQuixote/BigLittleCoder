@@ -31,7 +31,8 @@ export const appObject =
     instructions: 'selection',
     children: [
         {type: 'select', component: 'Monster'} 
-    ]
+    ],
+    showBalls: false,
     //all will need a type, component and name (what about non-monsters children you display?)
 
     //It's easier to clean up state when you have ALL of the values and sub properties defined here

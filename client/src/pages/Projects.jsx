@@ -1,15 +1,13 @@
 import React from 'react';
 import { projects } from '../portfolioData/projectData';
-import ProjectCard from '../components/ProjectCard';
-
+import HoverCard from '../components/HoverCard';
 
 function Projects() {
 
-    const showProjects = projects.map(p => <ProjectCard project={p} key={p.name}/>)
+    const showProjects = projects.map(p => <HoverCard info={p} key={p.name} />)
 
     return (
-        <div className='page'>
-            Your projects here
+        <div className='page aroundOnPage'>
             {showProjects}
         </div>
     )

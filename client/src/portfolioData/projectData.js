@@ -1,5 +1,5 @@
 
-export const projects = [
+const oldP = [
     {
         name: 'Explorio Party',
         description: `This real-time multiplayer game-in-development promises to be a rapturous good time for all. Rated-R version coming soon!🔥`,
@@ -37,4 +37,19 @@ export const projects = [
     //     link: '/react3D'
 
     // }
+]
+
+export const projects = [
+    {
+        name: 'Explorio Party',
+        tech: 'Socket.IO',
+        link: 'https://explorioparty.netlify.app/',
+        image: '../../public/gifs/coder1.gif'
+    },
+    {
+        name: 'React Hooks 101',
+        tech: 'React',
+        link: 'https://www.youtube.com/watch?v=dqg1HnF87Yw',
+        image: '../../public/gifs/coder1.gif'
+    },
 ]

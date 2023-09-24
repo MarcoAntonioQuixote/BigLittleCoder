@@ -1,3 +1,8 @@
+.canvas {
+    border: solid pink 2px;
+    pointer-events: none;
+    z-index: 0;
+}
 
 .theWorld {
     position: fixed;
@@ -6,6 +11,7 @@
     width: 100vw;
     height: 100vh;
     pointer-events: auto;
+    border: solid 2px hotpink;
 }
 
 .sceneContainer {
@@ -18,14 +24,15 @@
     align-items: center;
     font-size: 2rem;
     font-family: Helvetica, Arial, sans-serif;
-    /* border: solid red 2px; */
+    border: solid red 4px;
 }
 
-.theScene {
+.smScene {
     border-radius: 16px;
     height: 30vh;
     width: 80%;
     max-width: 600px;
+    border: solid 2px green;
 }
 
 .expandedScene {
@@ -34,6 +41,7 @@
     height: 80vh;
     /* pointer-events: none; */
     /* border: solid red 2px; */
+    border: solid 6px green;
 }
 
 .glass {
@@ -44,6 +52,7 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+    z-index: -1;
 }
 
 .instructions {
@@ -53,4 +62,12 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+    border: solid white 2px;
+}
+
+.balls {
+    border: solid red 2px;
+    width: 50vw;
+    height: 50vh;
+    z-index: 100;
 }

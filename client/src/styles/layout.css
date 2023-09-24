@@ -33,9 +33,26 @@
 .page {
     font-weight: 100;
     width: 80%;
-    min-width: 600px;
+    min-width: 100%;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 5%;
     display: flex;
+    /* border: solid green 2px; */
+}
+
+.centerOnPage {
     justify-content: center;
+}
+
+.aroundOnPage {
+    justify-content: space-around;
+    /* border: solid gold 2px; */
+    flex-wrap: wrap;
+}
+
+.flexChild {
+    /* border: solid red 2px; */
+    height: 300px;
+    width: 300px;
+    margin: 15px;
 }

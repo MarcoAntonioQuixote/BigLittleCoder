@@ -5,6 +5,7 @@ import Instructions from '../Instructions';
 import LRScrollSelection from '../LRScrollSelection';
 import { AppContext } from '../../storeManagement/AppContext';
 import SpeakerWindow from '../SpeakerWindow';
+import CopyGlass from './CopyGlass';
 
 function The3DCanvas() {
 
@@ -14,7 +15,7 @@ function The3DCanvas() {
     let layout;
 
     switch(status.mode) {
-        case 'selection': layout = 'theScene glass';
+        case 'selection': layout = 'smScene glass';
             break;
         case 'speaker': layout = 'expandedScene';
             break;
@@ -31,6 +32,9 @@ function The3DCanvas() {
                 <Instructions />
                 <TheScene />
                 {app.status.started && <SpeakerWindow />}
+                {app.status.started &&
+                <CopyGlass />
+                }
             </div>
             </LRScrollSelection>
         </div>
