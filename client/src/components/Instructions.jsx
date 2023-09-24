@@ -4,6 +4,7 @@ import { AppContext } from '../storeManagement/AppContext';
 import useInstructions from '../hooks/useInstructions';
 
 function Instructions() {
+    //TODO useInstructions controls too much logic, seperate it!
     useInstructions();
     const {app} = useContext(AppContext);
 

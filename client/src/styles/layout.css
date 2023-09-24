@@ -20,7 +20,7 @@
 }
 
 .canvas {
-    border: solid pink 2px;
+    /* border: solid pink 2px; */
     pointer-events: none;
     z-index: 0;
 }
@@ -30,7 +30,7 @@
     height: 30vh;
     width: 80%;
     max-width: 600px;
-    border: solid 2px green;
+    /* border: solid 2px green; */
 }
 
 .expandedScene {
@@ -39,7 +39,7 @@
     height: 80vh;
     /* pointer-events: none; */
     /* border: solid red 2px; */
-    border: solid 6px green;
+    /* border: solid 6px green; */
 }
 
 .instructions {
@@ -49,6 +49,6 @@
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
-    border: solid white 2px;
+    /* border: solid white 2px; */
     pointer-events: none;
 }

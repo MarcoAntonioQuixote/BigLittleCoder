@@ -19,10 +19,10 @@ a {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 400px;
-    border: 2px solid #000;
+    border: 3px solid #ff00aac8;
     border-radius: 16px;
     background-color: rgb(19, 9, 46);
-    box-shadow: 24;
+    box-shadow: 8px 8px 8px rgba(252, 251, 252, 0.5);
     padding: 40px;
     color: white;
 }

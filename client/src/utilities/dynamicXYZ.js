@@ -46,10 +46,6 @@ function dynamicXYZ(type,width,height) {
         default: //user, nothing
     }
 
-    // if (type === 'speaker') {
-    //     console.log('width', width, placement.start,placement.end);
-    // }
-
     return placement;
 }
 

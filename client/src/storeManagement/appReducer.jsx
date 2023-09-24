@@ -79,10 +79,4 @@ export default appReducer;
             Just 1 child - set by default
         if Start) - speaking (poke style)
             Just 2 children - 1 vs 1 of the other 5
-        
-    3) Miniatures, in the glass (showcasing a scene, 1v1, classroom, playing games, etc);
-
-
-        
-
 */

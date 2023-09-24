@@ -3,7 +3,6 @@ import { useReducer } from 'react'
 import {AppContext, appObject} from './storeManagement/AppContext'
 import appReducer from './storeManagement/appReducer';
 import { CharacterProvider as CharacterContext } from './storeManagement/CharacterContext';
-import AppRoutes from './components/AppRoutes';
 import Navbar from './components/Navbar';
 import StateInfo from './components/StateInfo';
 import The3DCanvas from './components/3D/The3DCanvas';
@@ -11,13 +10,14 @@ import The3DCanvas from './components/3D/The3DCanvas';
 function App() {
     const [app,setApp] = useReducer(appReducer,appObject);
 
+    //learned I didn't have to put routes here
+
     return (
         <AppContext.Provider value={{app,setApp}}>   
         <CharacterContext>
             <Navbar/>
             <The3DCanvas />
             {/* <StateInfo /> */}
-            {/* <AppRoutes /> VERY INTERESTING, I HAVE THIS NESTED IN THE COMPONENT THAT I WANT THESE PAGES TO RENDER IN! 😲🤯 */}
         </CharacterContext>
         </AppContext.Provider>
     )

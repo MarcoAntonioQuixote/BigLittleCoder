@@ -32,7 +32,6 @@ function Monster({info}) {
         if (type === 'select' || type === 'userBack') return;
         let modelRef = ref.current.position;
         if (app.status.transitioning) {
-            // console.log('transitioning');
             let outgoing = app.children[1].name;
             let incoming = app.status.next.speaker;
 

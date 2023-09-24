@@ -5,7 +5,6 @@ import Instructions from '../Instructions';
 import LRScrollSelection from '../LRScrollSelection';
 import { AppContext } from '../../storeManagement/AppContext';
 import SpeakerWindow from '../SpeakerWindow';
-import CopyGlass from './CopyGlass';
 
 function The3DCanvas() {
 
@@ -29,12 +28,9 @@ function The3DCanvas() {
         <div className="sceneContainer">
             <LRScrollSelection>
             <div className={layout}>
-                {/* <Instructions /> */}
+                <Instructions />
                 <TheScene />
                 {app.status.started && <SpeakerWindow />}
-                {app.status.started &&
-                <CopyGlass />
-                }
             </div>
             </LRScrollSelection>
         </div>

@@ -16,7 +16,7 @@ function TheScene() {
             <pointLight intensity={15} position={[-1,2,4]}/>
 
             <Suspense fallback={null}>
-                <GetModels/>
+                {/* <GetModels/> */}
                 <SceneActors />
                 {app.showBalls && <ShowBalls />}
             </Suspense>
