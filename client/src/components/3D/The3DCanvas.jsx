@@ -20,23 +20,21 @@ function The3DCanvas() {
             break;
     }
 
-    //REALLY GOOD CHANCE theCANVAS IS NOT NEEDED... TESTING WITHOUT
-
     return (
-        <div className='theCanvas'>
-            <div className="theWorld">
-                <World/>
-            </div>
-            <div className="sceneContainer">
-                <LRScrollSelection>
-                <div className={layout}>
-                    <Instructions />
-                    <TheScene />
-                    {app.status.started && <SpeakerWindow />}
-                </div>
-                </LRScrollSelection>
-            </div>
+        <>        
+        <div className="theWorld">
+            <World/>
         </div>
+        <div className="sceneContainer">
+            <LRScrollSelection>
+            <div className={layout}>
+                <Instructions />
+                <TheScene />
+                {app.status.started && <SpeakerWindow />}
+            </div>
+            </LRScrollSelection>
+        </div>
+        </>
     )
 }
 

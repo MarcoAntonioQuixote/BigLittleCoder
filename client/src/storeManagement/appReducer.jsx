@@ -55,8 +55,6 @@ const appReducer = (state,action) => {
             //payload will need to specify 2 things: 1) that the transition is starting or finalizing and 2) that the transition has reached the halfway point, so the new monster needs to be converted to a child component; payload.inProgress, payload.bringNext
             status.transitioning = payload.inProgress;
             if (payload.bringNext) {
-                console.log(status.next);
-                console.log(children[1]);
                 children[1] = {...children[1], name: status.next.speaker};
             }
             break;

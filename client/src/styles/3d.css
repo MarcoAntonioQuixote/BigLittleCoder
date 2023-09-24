@@ -1,14 +1,6 @@
-/* .theCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-} */
 
 .theWorld {
     position: fixed;
-    z-index: -10;
     top: 0;
     left: 0;
     width: 100vw;
@@ -40,6 +32,7 @@
     border-radius: 16px;
     width: 100vw;
     height: 80vh;
+    /* pointer-events: none; */
     /* border: solid red 2px; */
 }
 
@@ -54,10 +47,10 @@
 }
 
 .instructions {
-	/* border: solid red 2px; */
     padding-top: 20px;
     position: absolute;
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 }

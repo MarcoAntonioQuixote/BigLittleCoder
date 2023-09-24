@@ -6,7 +6,7 @@ import SceneActors from './SceneActors';
 
 function TheScene() {
     return (
-        <Canvas>
+        <Canvas className='canvas'>
             <ambientLight intensity={1.8}/>
             <pointLight intensity={15} position={[-1,2,4]}/>
 
@@ -14,7 +14,7 @@ function TheScene() {
                 <GetModels/>
                 <SceneActors />
             </Suspense>
-            <OrbitControls/>
+            {/* <OrbitControls/> */}
             {/* <Grid /> */}
         </Canvas>
     )

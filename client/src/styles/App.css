@@ -2,6 +2,7 @@
 @import 'layout.css';
 @import '3d.css';
 @import 'classes.css';
+@import 'test.css';
 
 body {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
