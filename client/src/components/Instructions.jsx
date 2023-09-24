@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { AppContext } from '../storeManagement/AppContext';
 import useInstructions from '../hooks/useInstructions';

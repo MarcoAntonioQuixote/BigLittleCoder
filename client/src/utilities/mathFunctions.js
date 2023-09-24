@@ -3,8 +3,8 @@ function interpolate(start,end,t) {
 }
 
 function rotateOnWidth(width) {
-    let minWidth = 3.5;
-    let maxWidth = 16.2;
+    let minWidth = 3; //3.5
+    let maxWidth = 17; //16.2
     let zForMin = 3.7;
     let zForMax = 4.5;
 
