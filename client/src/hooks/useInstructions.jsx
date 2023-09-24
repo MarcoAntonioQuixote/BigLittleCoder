@@ -20,6 +20,7 @@ const useInstructions = (next,specialValue) => {
         let path = location.pathname.slice(1);
         let paths = app.assigned.map(a => a.page);
         let isValidPath = paths.includes(path);
+        if (!isValidPath) return;
         let payload;
         if (app.status.started) {
             setApp({type: 'goToPage', payload: path})
@@ -27,10 +28,8 @@ const useInstructions = (next,specialValue) => {
         if (isValidPath) {
             path = path === '' ? 'Home' : path;
             payload = instructions[path];
-        } else {
-            payload = instructions[next];
-        }
-        setApp({type: 'setInstructions', payload})
+            setApp({type: 'setInstructions', payload})
+        } 
 
     },[location]);
     //make it dynamic by using specialValue

@@ -27,10 +27,10 @@ function LRScrollSelection({children}) {
 
     return (
     <>
-        <Button onClick={() => handleScroll(false)} className='scrollButton' size='large' >◀️</Button>
+        <Button onClick={() => handleScroll(false)} className='scrollButton fixSize' size='large' >◀️</Button>
             {children}
-        <Button onClick={() => handleScroll(true)} className='scrollButton' size='large'>▶️</Button>
-        <Button onClick={select} id='scrollSelect'>Select</Button>
+        <Button onClick={() => handleScroll(true)} className='scrollButton fixSize' size='large'>▶️</Button>
+        <Button className='fixSize' onClick={select} id='scrollSelect'>Select</Button>
     </>
     )
 }

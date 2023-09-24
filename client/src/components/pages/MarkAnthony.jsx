@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { AppContext } from '../../storeManagement/AppContext';
+import { Link } from 'react-router-dom';
 
 function MarkAnthony() {
 
@@ -16,6 +17,9 @@ function MarkAnthony() {
 
     return (
         <div className='pageInSpeakerWindow'>
+            <Link to='/contact'>
+                <button>click</button>
+            </Link>
         </div>
     )
 }

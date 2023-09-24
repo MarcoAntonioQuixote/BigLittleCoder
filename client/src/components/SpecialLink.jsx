@@ -6,6 +6,7 @@ import LinkModal from './LinkModal';
 function SpecialLink({link}) {
     const {app} = useContext(AppContext);
     const [open, setOpen] = useState(false);
+    //TODO: is there a way to not useLocation here?
     const location = useLocation();
     let path = decodeURIComponent(location.pathname);
     switch(path) {

@@ -26,3 +26,16 @@ a {
     padding: 40px;
     color: white;
 }
+
+.fixSize {
+    font-size: 1.2rem !important;
+}
+
+.fixSize span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.formElement {
+    margin-top: 10px;
+}

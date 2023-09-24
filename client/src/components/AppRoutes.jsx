@@ -6,6 +6,7 @@ import Cohorts from './pages/Cohorts';
 import Projects from './pages/Projects';
 import MarkAnthony from './pages/MarkAnthony';
 import Home from './pages/Home';
+import ContactMe from './pages/subPages/ContactMe';
 
 function AppRoutes() {
     return (
@@ -15,6 +16,7 @@ function AppRoutes() {
             <Route path='/cohorts' element={<Cohorts />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/markanthony' element={<MarkAnthony />} />
+            <Route path='/contact' element={<ContactMe/>} />
         </Routes>
     )
 }
