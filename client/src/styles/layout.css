@@ -38,12 +38,11 @@
     width: 100vw;
     height: 80vh;
     /* pointer-events: none; */
-    /* border: solid red 2px; */
-    /* border: solid 6px green; */
 }
 
 .instructions {
-    padding-top: 20px;
+    padding: 15px;
+    width: 70%;
     position: absolute;
     top: 0px;
     left: 50%;
@@ -51,4 +50,19 @@
     z-index: 1;
     /* border: solid white 2px; */
     pointer-events: none;
+    /* From https://css.glass */
+    background: rgba(21, 21, 21, 0.65);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(21, 21, 21, 0.3);
+}
+
+.instructions.started {
+    top: 35vh
+}
+
+.instructions.convo {
+    top: 5vh;
 }

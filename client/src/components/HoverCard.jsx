@@ -2,8 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function HoverCard({info}) {
+    let def = `Start typing, ask me a question`;
 
-    const {name = 'Explore',link,image,tech } = info;
+    const {name = def,link,image,tech } = info;
 
     const RenderCard = () => (
         <div className="gradHover">

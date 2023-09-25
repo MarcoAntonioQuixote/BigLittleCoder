@@ -9,18 +9,18 @@ function Instructions() {
     const {app} = useContext(AppContext);
 
     let instructions = app.instructions;
-    let moveToBottom = app.status.started ? {top: '35vh'} : null;
+    let page = app.status.next?.page;
+    let reposition = page === '' ? 'convo' : 'started';
 
     if (!instructions) return null;
 
     return (    
-        <div className="instructions" style={moveToBottom}>
+        <div className={`instructions ${reposition}`} >
             <Typewriter
                 key={instructions}
                 words={[instructions]} 
                 typeSpeed={20}
             />
-            
         </div>
     )
 }

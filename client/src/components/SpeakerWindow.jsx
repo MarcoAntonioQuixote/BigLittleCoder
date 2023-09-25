@@ -8,6 +8,8 @@ function SpeakerWindow() {
         const [placement,setPlacement] = useState({});
     
         const setSpeakerPane = () => {
+
+            console.log('re-running')
             
             const rect = document.getElementById('copyGlass').getBoundingClientRect();
 

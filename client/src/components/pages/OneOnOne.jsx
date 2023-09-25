@@ -3,7 +3,7 @@ import React from 'react';
 function OneOnOne() {
 
     let a = 
-    <figure class="snip0016">
+    <figure key='a' class="snip0016">
         <img className='slideImg' src="https://media.wired.com/photos/5d69aa67f919890009997643/master/w_2560%2Cc_limit/Oped-AI-Protecting-Black%2520and%2520Brown%2520Diaspora-LS011379.jpg" alt="sample43"/>
         <figcaption>
             <h2>Build <span>dreams</span>, not just apps 🌈</h2>
@@ -11,7 +11,7 @@ function OneOnOne() {
     </figure>
     
     let b = 
-    <figure class="snip0016">
+    <figure key='b' class="snip0016">
         <img className='slideImg' src="https://nestle-nespresso.com/sites/site.prod.nestle-nespresso.com/files/styles/crop_freeform/public/Nespresso-Signs-UN-Womens-Empowerment-Principles_1140x500.jpg?itok=RYftaEAm" alt="sample41"/>
         <figcaption>
             <h2><span>Alt</span> your life & <span>Ctrl</span> your future 🕹️</h2>
@@ -19,7 +19,7 @@ function OneOnOne() {
     </figure>
 
     let c = 
-    <figure class="snip0016">
+    <figure key='c' class="snip0016">
         <img className='slideImg' src="https://i.pinimg.com/736x/3c/e4/39/3ce439a152a704da5f7e52c6902689ab.jpg" alt="sample42"/>
         <figcaption>
             <h2>Think like a <span>machine</span>, only better 🧠</h2>

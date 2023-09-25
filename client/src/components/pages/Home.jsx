@@ -1,19 +1,45 @@
-import React from 'react';
-import HoverCard from '../HoverCard';
+import React, { useContext, useEffect, useState } from 'react';
+import { AppContext } from '../../storeManagement/AppContext';
+import { returnText } from '../../portfolioData/randomMonsterInfo';
+import { Button } from '@mui/material';
 
 function Home() {
 
-    // let num = randomNum(1,3);
-    // let path = `../../public/gifs/coder${num}.gif`;
+    const {setApp} = useContext(AppContext);
+    const [prompt,setPrompt] = useState('');
 
-    let paths = [];
-    for (let x = 1; x <= 4; x++) {
-        paths.push(`/gifs/coder${x}.gif`);
+    useEffect(() => {
+        let charNum = prompt.length;
+        if (charNum === 1) {
+            setApp({type: 'setInstructions', payload: returnText('start')})
+        } else if (charNum === 100) {
+            setApp({type: 'setInstructions', payload: returnText('halfway')})
+        } else if (charNum === 193) {
+            setApp({type: 'setInstructions', payload: returnText('end')})
+        }
+    }, [prompt]);
+
+    const handlePrompt = (e) => {
+        setPrompt(e.target.value);
+    }
+
+    const chatReq = () => {
+        console.log(prompt);
     }
 
     return (
         <div className='pageInSpeakerWindow centerOnPage'>
-            <HoverCard info={{image: paths[0]}} />
+            <textarea type="text" 
+                placeholder='Ask me anything...'
+                className='chatWithMonster'
+                rows={6}
+                autoFocus
+                maxLength={200}
+                onChange={handlePrompt}
+            />
+
+            <Button onClick={chatReq} className='fixSize button' variant='text'>Chat</Button>
+
         </div>
     )
 }

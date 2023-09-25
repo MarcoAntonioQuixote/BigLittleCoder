@@ -208,6 +208,7 @@ const HelperText = styled((props) => {
   const [dirty, setDirty] = useState(false);
 
   useEffect(() => {
+    console.log(formControlContext);
     if (formControlContext?.filled) {
       setDirty(true);
     }
