@@ -48,8 +48,10 @@ export default function ContactForm() {
             console.log(errors);
             return errors;
         } else {
-            
-            useEmail(data);
+            let individual = data.individual ? true : false;
+            let cohorts = data.cohorts ? true : false;
+            let submission = {...data,individual,cohorts};
+            useEmail(submission);
         }
     };
     
