@@ -48,6 +48,7 @@ export default function ContactForm() {
             console.log(errors);
             return errors;
         } else {
+            
             useEmail(data);
         }
     };
@@ -84,6 +85,32 @@ export default function ContactForm() {
         </form>
     );
 }
+
+const commonStyles = (theme) => `
+  width: 320px;
+  font-size: 1.2rem;
+  font-family: IBM Plex Sans, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: ${theme.palette.mode === 'dark' ? grey[300] : grey[900]};
+  background: ${theme.palette.mode === 'dark' ? grey[900] : '#fff'};
+  border: 1px solid ${theme.palette.mode === 'dark' ? grey[800] : grey[300]};
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  &:hover {
+    background: ${theme.palette.mode === 'dark' ? '' : grey[100]};
+    border-color: ${theme.palette.mode === 'dark' ? grey[700] : grey[400]};
+  }
+  &:focus {
+    outline: 3px solid ${theme.palette.mode === 'dark' ? blue[600] : blue[100]};
+  }
+`;
+
+const test = styled(TextareaAutosize)(`
+  ${({ theme }) => commonStyles(theme)}
+  min-height: 100px;
+`);
 
 const StyledTextarea = styled(TextareaAutosize)(
     ({ theme }) => `
