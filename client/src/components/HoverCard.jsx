@@ -18,12 +18,12 @@ function HoverCard({info}) {
     return (
     <>
         {name ? 
-            <Link to='JoinCohort'>
-                <RenderCard />
-            </Link> : 
             <a href={link} target='_blank'>
                 <RenderCard />
-            </a>
+            </a>  :
+            <Link to='JoinCohort'>
+                <RenderCard />
+            </Link> 
         }
     </>
     )

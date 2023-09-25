@@ -45,11 +45,5 @@ export const projects = [
         tech: 'Socket.IO',
         link: 'https://explorioparty.netlify.app/',
         image: '/gifs/coder1.gif'
-    },
-    {
-        name: 'React Hooks 101',
-        tech: 'React',
-        link: 'https://www.youtube.com/watch?v=dqg1HnF87Yw',
-        image: '/gifs/coder1.gif'
-    },
+    }
 ]

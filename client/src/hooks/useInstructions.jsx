@@ -8,7 +8,7 @@ const instructions = {
     Home: `Big Little Coder helps you dream big with little baby steps along the way. 👟`,
     Cohorts: 'Want to learn in a group setting? Radical!',
     '1-on-1': 'What about 1-on-1s!',
-    Projects: `Check out personal projects we're working on!`,
+    Projects: `Check out this featured project we're working on! First to not get caught by 10 fires wins! It only works if you play with a friend! 🔥`,
     MarkAnthony: `He's a cool guy - he helped bring me and my friends to life! 🔥`
 }
 
@@ -22,10 +22,15 @@ const useInstructions = (next,specialValue) => {
         let isValidPath = paths.includes(path);
         if (!isValidPath) return;
         let payload;
+        if (!app.status.started) {
+            setApp({type: 'setInstructions', payload: instructions['selection']});
+            return
+        }
         if (app.status.started) {
             setApp({type: 'goToPage', payload: path})
         }
         if (isValidPath) {
+            console.log('on first render?');
             path = path === '' ? 'Home' : path;
             payload = instructions[path];
             setApp({type: 'setInstructions', payload})
