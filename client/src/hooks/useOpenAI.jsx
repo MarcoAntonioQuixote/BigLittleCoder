@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import axios from 'axios';
 import { AppContext } from '../storeManagement/AppContext';
 import { getMonsterInfo } from '../utilities/monstFunctions';
@@ -9,16 +9,16 @@ function useOpenAI() {
 
     async function executeChat(prompt) {
 
-        const url = 'http://localhost:8000/promptChat';
+        const url = import.meta.env.VITE_BACKEND;
 
         const chatReq = { 
             ...getMonsterInfo(app.children[1].name), prompt
         }
 
-        let response = await axios.post(url, chatReq);
+        let response = await axios.post(`${url}/promptChat`, chatReq);
         let payload = response.data.choices[0].text;
         setApp({type: 'setInstructions', payload})
-        console.log(payload);
+
     }
 
     return executeChat;
