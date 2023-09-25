@@ -1,16 +1,22 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState, useRef } from 'react';
 import { AppContext } from '../../storeManagement/AppContext';
 import { returnText } from '../../portfolioData/randomMonsterInfo';
 import { Button } from '@mui/material';
+import useOpenAI from '../../hooks/useOpenAI';
 
 function Home() {
 
     const {setApp} = useContext(AppContext);
     const [prompt,setPrompt] = useState('');
+    const [hasResponded, setHasResponded] = useState(false);
+    const executeChat = useOpenAI();
+    const buttonRef = useRef()
 
     useEffect(() => {
         let charNum = prompt.length;
-        if (charNum === 1) {
+        if (charNum === 0 && hasResponded) {
+            setApp({type: 'setInstructions', payload: 'Whoa'})
+        } else if (charNum === 1) {
             setApp({type: 'setInstructions', payload: returnText('start')})
         } else if (charNum === 100) {
             setApp({type: 'setInstructions', payload: returnText('halfway')})
@@ -24,21 +30,33 @@ function Home() {
     }
 
     const chatReq = () => {
-        console.log(prompt);
+        executeChat(prompt);
+        setHasResponded(true);
+        setPrompt('');
+        buttonRef.current.blur();
+        // TODO: error handeling in case the server is down
+    }
+
+    const reset = () => {
+        setHasResponded(false);
+        setApp({type: 'setInstructions', payload: returnText('reset')})
     }
 
     return (
         <div className='pageInSpeakerWindow centerOnPage'>
             <textarea type="text" 
-                placeholder='Ask me anything...'
+                placeholder={hasResponded ? '' : 'Ask me anything...'}
                 className='chatWithMonster'
                 rows={6}
                 autoFocus
                 maxLength={200}
                 onChange={handlePrompt}
+                value={prompt}
             />
 
-            <Button onClick={chatReq} className='fixSize button' variant='text'>Chat</Button>
+            <Button ref={buttonRef} onClick={hasResponded ? reset : chatReq} className='fixSize button' variant='text'>
+                {hasResponded ? 'Chat Again' : 'Chat'}
+            </Button>
 
         </div>
     )

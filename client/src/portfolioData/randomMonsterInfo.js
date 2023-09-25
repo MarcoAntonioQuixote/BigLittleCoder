@@ -23,6 +23,16 @@ let monsterOptions = {
         "You're quite the chatterbox!",
         "Keep it short, buddy!",
         "Hold on, almost out of room!"
+    ],
+    reset: [
+        "Ahh, how the tables have turned yet again.",
+        "Whoa, this again! 😊",
+        "Whoa, this again?",
+        "Round two or seven or three. I don't know, I'm still learning to count. 💯",
+        "Deja vu! Didn't we just do this? 🔄",
+        "Reset button hit. Let's go again! 🎉",
+        "New convo, who dis?",
+        'What do you want to chat about?',
     ]
 }
 
