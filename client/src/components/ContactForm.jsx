@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { FormControl, useFormControlContext } from '@mui/base/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import { Input, inputClasses } from '@mui/base/Input';
@@ -8,8 +8,11 @@ import { styled } from '@mui/system';
 import clsx from 'clsx';
 import { Button, TextareaAutosize } from '@mui/material';
 import useEmail from '../hooks/useEmail';
+import { AppContext } from '../storeManagement/AppContext';
 
 export default function ContactForm() {
+
+    const {app} = useContext(AppContext);
 
     const [data,setData] = useState({});
 
@@ -51,7 +54,7 @@ export default function ContactForm() {
             let individual = data.individual ? true : false;
             let cohorts = data.cohorts ? true : false;
             let submission = {...data,individual,cohorts};
-            useEmail(submission);
+            useEmail(submission,app);
         }
     };
     
