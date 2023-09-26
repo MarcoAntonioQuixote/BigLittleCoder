@@ -53,6 +53,7 @@ const appReducer = (state,action) => {
             break;
         case 'track':
             newState.secondCanvas.tracking = payload;
+            console.log('track', newState);
             break;
         }
         return newState;

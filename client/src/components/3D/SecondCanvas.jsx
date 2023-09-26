@@ -1,9 +1,10 @@
-import React, { Suspense, useContext } from 'react';
+import React, { Suspense, useContext, useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { Grid, OrbitControls } from '@react-three/drei';
 import { AppContext } from '../../storeManagement/AppContext';
 import ShowBalls from './ShowBalls';
 import usePlacement from '../../hooks/usePlacement';
+import ShowCohort from './ShowCohort';
 
 function SecondCanvas() {
 
@@ -18,6 +19,10 @@ function SecondCanvas() {
             Component = ShowBalls;
             subStyles = 'balls3D';
             break;
+        case 'cohort':
+            Component = ShowCohort;
+            subStyles = 'showCohort'; //TODO fix
+            break;
         default:
             Component = null;
     }
@@ -31,7 +36,6 @@ function SecondCanvas() {
                 {Component && <Component />}
             </Suspense>
             <OrbitControls/>
-            <Grid/>
         </Canvas>
     </div>
     )

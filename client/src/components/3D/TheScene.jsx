@@ -8,7 +8,7 @@ function TheScene() {
 
 
     return (
-        <Canvas className='canvas'>
+        <Canvas className='canvas' >
             <ambientLight intensity={1.8}/>
             <pointLight intensity={15} position={[-1,2,4]}/>
 

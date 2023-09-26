@@ -43,6 +43,11 @@ a {
     top: 32.5vh;
 }
 
+.fixSize.cohort {
+    background-color: rgba(21,21,21, 0.35);
+    color: white;
+}
+
 .formElement {
     margin-top: 10px;
 }

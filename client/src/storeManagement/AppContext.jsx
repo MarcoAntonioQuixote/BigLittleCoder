@@ -32,8 +32,9 @@ export const appObject =
         {type: 'select', component: 'Monster'} 
     ],
     secondCanvas: {
-        tracking: null,
+        tracking: null, //this will be all you have to set
         balls: 'headerMA', //other key-value pairs to track
+        cohort: 'copyGlass',
     }
 };
 

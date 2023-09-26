@@ -1,7 +1,21 @@
 import { rotateOnWidth } from "./mathFunctions";
 
 
-function dynamicXYZ(type,width,height) {
+function dynamicXYZ(type,width,height,index) {
+
+    // switch(index) { I am not a huge fan of this solution
+    //     case 0: index = -4;
+    //         break;
+    //     case 1: index = -2;
+    //         break;
+    //     case 2: index = 2;
+    //         break;
+    //     case 4: index = 6;
+    //         break;
+    //     default: index = 0;
+    // }
+
+    // index = index ? index : 0;
 
     let placement = {
         start: {

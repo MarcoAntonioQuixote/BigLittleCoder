@@ -3,6 +3,7 @@ import { useAnimations, useGLTF } from '@react-three/drei';
 import { AppContext } from '../../storeManagement/AppContext';
 import { useFrame, useThree } from '@react-three/fiber';
 import dynamicXYZ from '../../utilities/dynamicXYZ';
+import { randomNum } from '../../utilities/mathFunctions';
 
 function Monster({info}) {
 
@@ -19,8 +20,17 @@ function Monster({info}) {
     const {scale,position,rotation} = placement; 
 
     const ref = useRef();
+
+    useEffect(() => {
+        const randomDelay = randomNum(0,450);
+        const timer = setTimeout(() => {
+            action.play();
+        }, randomDelay);
     
-    action.play();
+        // Cleanup timer if component unmounts
+        return () => clearTimeout(timer);
+    }, [action]);
+    
 
     useEffect(() => {
         if (app.status.transitioning) return;
@@ -28,7 +38,7 @@ function Monster({info}) {
     }, [viewport]);
 
     useFrame(() => {
-        
+        //TODO remove the type === speaker
         if (type === 'select' || type === 'userBack') return;
         let modelRef = ref.current.position;
         if (app.status.transitioning) {

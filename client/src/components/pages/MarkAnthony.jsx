@@ -8,10 +8,12 @@ function MarkAnthony() {
 
     const {setApp} = useContext(AppContext);
 
+    //TODO all of these that you'r tracking, you could just define a beter hook yourself - tsk tsk
+
     useEffect(() => {
         setApp({type: 'track', payload: 'balls'});
         return () => {
-            setApp({type: 'track', payload: 'balls'});
+            setApp({type: 'track', payload: null});
         }
     },[]);
 

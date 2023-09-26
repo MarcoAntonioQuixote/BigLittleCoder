@@ -26,7 +26,7 @@ function The3DCanvas() {
         <div className="theWorld">
             <World/>
         </div>
-        <div className="sceneContainer">
+        <div className="sceneContainer" >
             <LRScrollSelection>
             <div className={layout}>
                 <Instructions />

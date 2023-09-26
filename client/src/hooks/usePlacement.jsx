@@ -20,15 +20,27 @@ function usePlacement() {
     }, []);
 
     function positionNode() {
-
+        if (!trackingID) return;
         const rect = document.getElementById(trackingID).getBoundingClientRect();
 
         //specifically made for balls, what about others?
-        setPlacement({
-            position: `fixed`,
-            top: `${rect.top - 50}px`,
-            left: `${rect.left - 150}px`,
-        })
+        switch(tracking) {
+            case 'balls': 
+                setPlacement({
+                    position: `fixed`,
+                    top: `${rect.top - 50}px`,
+                    left: `${rect.left - 150}px`,
+                })
+                break;
+            case 'cohort':
+                setPlacement({
+                    position: `fixed`,
+                    top: `${rect.top + 150}px`,
+                    left: `${rect.left + 150}px`,
+                })
+                break;
+        }
+
     }
     return placement;
 }
