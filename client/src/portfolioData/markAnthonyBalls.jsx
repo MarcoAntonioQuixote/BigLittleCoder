@@ -43,41 +43,45 @@ const portfolioTiles = [
 
 const techTiles = [
     {
-        tech: 'React',
+        title: 'React',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
         text: 'React ⚛️ to user needs, one component at a time'
     },
     {
-        tech: 'AI',
+        title: 'AI',
         image: 'https://cdn-icons-png.flaticon.com/512/1985/1985500.png',
         text: 'Master AI Integration 🤖 for a smarter app experience'
     },
     {
-        tech: '3D Rendering',
+        title: '3D Rendering',
         image: 'https://cdn3d.iconscout.com/3d/premium/thumb/atom-8367793-6655885.png?f=webp',
         text: 'Step outside of the 2nd dimension with R3F',
         enlarge: true,
     },
     {
-        tech: 'Socket.IO',
+        title: 'Socket.IO',
         image: 'https://codesandbox.io/api/v1/sandboxes/k3h2l/screenshot.png',
         text: 'Connect across the 🌍 in real time with Socket.IO',
         enlarge: true,
     },
     {
-        tech: 'Wire Framing',
+        title: 'Wire Framing',
         image: 'https://cdn-icons-png.flaticon.com/512/8109/8109328.png',
         text: 'From concept to code with Wire Framing 🎨'
     },
     {
-        tech: 'NodeJS',
+        title: 'NodeJS',
         image: 'https://static-00.iconduck.com/assets.00/nodejs-plain-icon-226x256-hqi690bd.png',
         text: 'Bring the front and back end together 🫂 with NodeJS'
     },
 ]
 
+const coachingOptions = [
+    {title: 'Cohorts', text: 'Ready to take a deep dive into the world of coding? Join our highly interactive cohorts and elevate your coding skills through collaborative learning.', image: '/gifs/blcVideo.gif'},
+    {title: '1-on-1', text: "Get personalized, expert guidance to fast-track your coding journey with our 1-on-1 coaching sessions. Don't just learn to code—master it.", image: '/gifs/coder4.gif'},
+]
 
-export { balls, portfolioTiles, techTiles }
+export { balls, portfolioTiles, techTiles, coachingOptions }
 
 //<sphereGeometry args={[1,32,32]} />
 

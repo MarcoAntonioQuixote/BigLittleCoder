@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { AppContext } from '../../storeManagement/AppContext';
-import { Button } from '@mui/material';
-import CaptionCard from '../CaptionCard';
+import GlowCard from '../GlowCard';
+import { coachingOptions } from '../../portfolioData/markAnthonyBalls';
 
 function Coaching() {
 
@@ -14,23 +14,13 @@ function Coaching() {
     //     }
     // },[]);
 
-    let options = [
-        {text: 'Cohorts', image: '/gifs/blcVideo.gif'},
-        {text: '1-on-1', image: '/gifs/coder4.gif'},
-    ]
+    const showTiles = coachingOptions.map((option,i) => <GlowCard key={i} info={option} />)
 
     return (
         <div className='pageInSpeakerWindow coaching'>
-
-            {options.map((option,i) => <CaptionCard className='thisTile' key={i} card={option} />)}
-
-
-
-                {/* <img className='coachingGif' id='cohortGif' src='/gifs/blcVideo.gif' />
-                <img className='coachingGif' src='/gifs/coder4.gif' /> */}
-            {/* <Button className='fixSize cohort' variant='text'>
-                Sure!
-            </Button> */}
+            <div className="container">
+                {showTiles}
+            </div>
         </div>
     )
 }

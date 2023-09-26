@@ -5,13 +5,15 @@ import { AppContext } from '../storeManagement/AppContext';
 function SpeakerWindow() {
 
     const {app} = useContext(AppContext);
+    const page = app.status.currentPage;
 
     function SetGlass() {
 
         const [placement,setPlacement] = useState({});
-        const onTS = app.status.currentPage === 'TechStack';
-        let darken = onTS ? 'darken' : '';
-        console.log(darken);
+        let onDarken = '';
+        if (page === 'TechStack' || page === 'Coaching') {
+            onDarken = 'darken'
+        }
 
         const setSpeakerPane = () => {
 
@@ -38,7 +40,7 @@ function SpeakerWindow() {
         }, []);
     
         return (
-            <div className={`glass putBehind ${darken}`} style={placement}></div>
+            <div className={`glass putBehind ${onDarken}`} style={placement}></div>
         )
     }
 
