@@ -49,7 +49,7 @@
 
 .instructions {
     padding: 15px;
-    width: 70%;
+    width: 60%;
     position: absolute;
     top: 0px;
     left: 50%;
@@ -64,7 +64,7 @@
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     border: 1px solid rgba(21, 21, 21, 0.3);
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .instructions.started {

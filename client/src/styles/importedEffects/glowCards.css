@@ -1,6 +1,9 @@
 
 .container
 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,18 +12,21 @@
   font-family: consolas;
 }
 
-.container .box
+.container .box 
 {
   position: relative;
+  /* width: 100px;
+  height: 150px; */
   width: 320px;
   height: 400px;
+  /* I think the width and height */
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 40px 30px;
   transition: 0.5s;
 }
-
+/* both below have a height and width */
 .container .box::before
 {
   content:' ';
@@ -35,7 +41,7 @@
   transform: skewX(15deg);
   transition: 0.5s;
 }
-
+ 
 .container .box::after
 {
   content:'';
@@ -57,8 +63,8 @@
   transform: skewX(0deg);
   left: 20px;
   width: calc(100% - 90px);
-  
 }
+
 
 .container .box:nth-child(1):before,
 .container .box:nth-child(1):after
@@ -76,6 +82,21 @@
 .container .box:nth-child(3):after
 {
   background: linear-gradient(315deg, #4dff03, #00d0ff)
+}
+
+.container .box:nth-child(4):before,
+.container .box:nth-child(4):after {
+  background: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+.container .box:nth-child(5):before,
+.container .box:nth-child(5):after {
+  background: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+}
+
+.container .box:nth-child(6):before,
+.container .box:nth-child(6):after {
+  background: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
 }
 
 .container .box span
@@ -178,14 +199,16 @@
 
 .container .box .content h2
 {
-  font-size: 2em;
+  font-size: .5em;
+  /* font-size: 2em; */
   color: #fff;
   margin-bottom: 10px;
 }
 
 .container .box .content p
 {
-  font-size: 1.1em;
+  font-size: .5em;
+  /* font-size: 1.1em; */
   margin-bottom: 10px;
   line-height: 1.4em;
 }
@@ -193,7 +216,8 @@
 .container .box .content a
 {
   display: inline-block;
-  font-size: 1.1em;
+  font-size: .5em;
+  /* font-size: 1.1em; */
   color: #111;
   background: #fff;
   padding: 10px;
@@ -208,4 +232,8 @@
   background: #ffcf4d;
   border: 1px solid rgba(255, 0, 88, 0.4);
   box-shadow: 0 1px 15px rgba(1, 1, 1, 0.2);
+}
+
+.glowIcon {
+  scale: 1.3
 }

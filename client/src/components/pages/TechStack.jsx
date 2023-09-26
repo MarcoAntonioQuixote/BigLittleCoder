@@ -1,34 +1,15 @@
 import React from 'react';
+import { techTiles } from '../../portfolioData/markAnthonyBalls';
+
 
 function TechStack() {
+
+    const showTiles = techTiles.map((tile,i) => <GlowCard key={i} info={tile} />)
 
     return (
         <div className='pageInSpeakerWindow aroundOnPage'>
             <div className="container">
-                <div className="box">
-                    <span></span>
-                    <div className="content">
-                    <h2>Card one</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#">Read More</a>
-                    </div>
-                </div>
-                <div className="box">
-                    <span></span>
-                    <div className="content">
-                    <h2>Card two</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#">Read More</a>
-                    </div>
-                </div>
-                <div className="box">
-                    <span></span>
-                    <div className="content">
-                    <h2>Card Three</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <a href="#">Read More</a>
-                    </div>
-                </div>
+                {showTiles}
             </div>
         </div>
     )
@@ -39,3 +20,17 @@ export default TechStack;
 //special thanks
 
 //https://codepen.io/kodplay/pen/oNBreRJ
+
+function GlowCard({info}) {
+    return (
+        <div className="box">
+            <span></span>
+            <div className="content">
+                <h2>{info.tech}</h2>
+                <p>{info.text}</p>
+                {/* <a href="#">Read More</a> */}
+                <img className={info.enlarge ? 'glowIcon' : null} style={{width: '50px'}} src={info.image} alt="" />
+            </div>
+        </div>
+    )
+}

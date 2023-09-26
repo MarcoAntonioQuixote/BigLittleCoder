@@ -41,7 +41,43 @@ const portfolioTiles = [
     },
 ]
 
-export { balls, portfolioTiles }
+const techTiles = [
+    {
+        tech: 'React',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png',
+        text: 'React ⚛️ to user needs, one component at a time'
+    },
+    {
+        tech: 'AI',
+        image: 'https://cdn-icons-png.flaticon.com/512/1985/1985500.png',
+        text: 'Master AI Integration 🤖 for a smarter app experience'
+    },
+    {
+        tech: '3D Rendering',
+        image: 'https://cdn3d.iconscout.com/3d/premium/thumb/atom-8367793-6655885.png?f=webp',
+        text: 'Step outside of the 2nd dimension with R3F',
+        enlarge: true,
+    },
+    {
+        tech: 'Socket.IO',
+        image: 'https://codesandbox.io/api/v1/sandboxes/k3h2l/screenshot.png',
+        text: 'Connect across the 🌍 in real time with Socket.IO',
+        enlarge: true,
+    },
+    {
+        tech: 'Wire Framing',
+        image: 'https://cdn-icons-png.flaticon.com/512/8109/8109328.png',
+        text: 'From concept to code with Wire Framing 🎨'
+    },
+    {
+        tech: 'NodeJS',
+        image: 'https://static-00.iconduck.com/assets.00/nodejs-plain-icon-226x256-hqi690bd.png',
+        text: 'Bring the front and back end together 🫂 with NodeJS'
+    },
+]
+
+
+export { balls, portfolioTiles, techTiles }
 
 //<sphereGeometry args={[1,32,32]} />
 
