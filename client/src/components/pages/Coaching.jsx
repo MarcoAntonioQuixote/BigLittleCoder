@@ -14,7 +14,7 @@ function Coaching() {
     // },[]);
 
     return (
-        <div className='pageInSpeakerWindow cohorts'>
+        <div className='pageInSpeakerWindow coaching'>
             <img id='cohortGif' src='/gifs/blcVideo.gif' />
             <span>Check out these Cohorts</span>
             <Button className='fixSize cohort' variant='text'>

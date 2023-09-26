@@ -21,7 +21,7 @@ function SecondCanvas() {
             break;
         case 'cohort':
             Component = ShowCohort;
-            subStyles = 'showCohort'; //TODO fix
+            subStyles = 'showCohort'; //TODO fix, it's not being called, which is good,
             break;
         default:
             Component = null;

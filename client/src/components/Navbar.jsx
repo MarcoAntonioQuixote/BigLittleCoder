@@ -3,7 +3,7 @@ import webHeader from '../assets/bigLittleCoder.png';
 import SpecialLink from './SpecialLink';
 
 function Navbar() {
-    const links = ['Big Little Coder','Cohorts','TechStack','Projects','Mark Anthony'];
+    const links = ['Big Little Coder','TechStack','Coaching','Projects','Mark Anthony'];
 
     /* TODO: Make Nav Bar On Smaller Devices, px threshold?? 800 */
     return (

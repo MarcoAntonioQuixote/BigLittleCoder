@@ -13,8 +13,8 @@ export const appObject =
     },
     assigned: [
         { page: "", speaker: null },
-        { page: "Cohorts", speaker: null },
         { page: "TechStack", speaker: null },
+        { page: "Coaching", speaker: null },
         { page: "Projects", speaker: null },
         { page: "MarkAnthony", speaker: null }
     ],

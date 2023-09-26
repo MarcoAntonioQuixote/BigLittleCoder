@@ -6,7 +6,7 @@ const instructions = {
     selection: `Which Big Little Coder are You?`,
     speaker: `Cool! Let's check out this journey together!`,
     Home: `Big Little Coder helps you dream big with little baby steps along the way. 👟`,
-    Cohorts: 'Want to learn in a group setting? Radical!',
+    Coaching: 'Want to learn in a group setting? Radical!',
     TechStack: `What's in the stack? What are we learning?`,
     Projects: `Check out this featured project we're working on! First to not get caught by 10 fires wins! It only works if you play with a friend! 🔥`,
     MarkAnthony: `He's a cool guy - he helped bring me and my friends to life! 🔥`
@@ -20,6 +20,7 @@ const useInstructions = (next,specialValue) => {
         let path = location.pathname.slice(1);
         let paths = app.assigned.map(a => a.page);
         let isValidPath = paths.includes(path);
+        console.log('path', path);
         if (!isValidPath) {
             setApp({type: 'setPage',payload: path});
             return;
