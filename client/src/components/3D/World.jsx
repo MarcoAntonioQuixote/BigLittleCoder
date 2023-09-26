@@ -24,7 +24,7 @@ function World() {
             <Suspense fallback={null}>
                 <BackgroundWorld />
             </Suspense>
-            <OrbitControls enableZoom={false}/>
+            {/* <OrbitControls enableZoom={false}/> */}
         </Canvas>
     )
 }

@@ -35,7 +35,7 @@ function SecondCanvas() {
             <Suspense fallback={null}>
                 {Component && <Component />}
             </Suspense>
-            <OrbitControls/>
+            {/* <OrbitControls/> */}
         </Canvas>
     </div>
     )

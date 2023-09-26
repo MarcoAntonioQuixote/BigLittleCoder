@@ -16,7 +16,7 @@ function TheScene() {
                 {/* <GetModels/> */}
                 <SceneActors />
             </Suspense>
-            <OrbitControls/>
+            {/* <OrbitControls/> */}
             {/* <Grid /> */}
         </Canvas>
     )
