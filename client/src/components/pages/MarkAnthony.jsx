@@ -9,9 +9,9 @@ function MarkAnthony() {
     const {setApp} = useContext(AppContext);
 
     useEffect(() => {
-        setApp({type: 'showBalls', payload: true});
+        setApp({type: 'track', payload: 'balls'});
         return () => {
-            setApp({type: 'showBalls', payload: false});
+            setApp({type: 'track', payload: 'balls'});
         }
     },[]);
 
@@ -23,7 +23,7 @@ function MarkAnthony() {
 
     return (
         <div className='pageInSpeakerWindow align'>
-            <div id='titleMarker' className='super'>
+            <div id='headerMA' className='super'>
                 Mark Anthony | A Portfolio
             </div>
 

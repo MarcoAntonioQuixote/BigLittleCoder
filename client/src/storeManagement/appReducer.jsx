@@ -51,25 +51,11 @@ const appReducer = (state,action) => {
                 children[1] = {...children[1], name: status.next.speaker};
             }
             break;
-        case 'showBalls': 
-            newState.showBalls = payload; 
-
+        case 'track':
+            newState.secondCanvas.tracking = payload;
+            break;
         }
         return newState;
 }
 
 export default appReducer;
-
-/* 
-    There will be other scenes, but here's what I got
-        Selection -- Start -- 
-        
-    children - could be 1, 2, or 6
-
-        We need to know the mode to know the # of children
-
-        if Selection) 
-            Just 1 child - set by default
-        if Start) - speaking (poke style)
-            Just 2 children - 1 vs 1 of the other 5
-*/

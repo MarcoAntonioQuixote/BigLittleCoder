@@ -8,8 +8,6 @@ import theme from './styles/themes.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
-        {/* <ThemeProvider theme={theme}> */}
-            <App />
-        {/* </ThemeProvider> */}
+        <App />
     </BrowserRouter>
 )

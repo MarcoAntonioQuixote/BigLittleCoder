@@ -10,7 +10,6 @@ function Instructions() {
 
     let instructions = app.instructions;
     let page = app.status.currentPage;
-    console.log(page);
     let reposition;
     switch(page) {
         case '': reposition = 'convo';

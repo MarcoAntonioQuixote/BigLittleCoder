@@ -18,8 +18,6 @@ export const appObject =
         { page: "Projects", speaker: null },
         { page: "MarkAnthony", speaker: null }
     ],
-    powersOn: true,
-    movement: [],
     load: {
         characters: ['Vulpes','Bunny','Cardinal','Fish','Tortoise','Toad'],
         moves: ['Idle', 'Jump', 'Run', 'Run_Wild', 'Trot', 'Turn', 'Turntable'],
@@ -33,9 +31,9 @@ export const appObject =
     children: [
         {type: 'select', component: 'Monster'} 
     ],
-    showBalls: false,
-    //all will need a type, component and name (what about non-monsters children you display?)
-
-    //It's easier to clean up state when you have ALL of the values and sub properties defined here
+    secondCanvas: {
+        tracking: null,
+        balls: 'headerMA', //other key-value pairs to track
+    }
 };
 

@@ -5,7 +5,7 @@ import Instructions from '../Instructions';
 import LRScrollSelection from '../LRScrollSelection';
 import { AppContext } from '../../storeManagement/AppContext';
 import SpeakerWindow from '../SpeakerWindow';
-import ShowBalls from './ShowBalls';
+import SecondCanvas from './SecondCanvas';
 
 function The3DCanvas() {
 
@@ -35,7 +35,9 @@ function The3DCanvas() {
             </div>
             </LRScrollSelection>
         </div>
-        { app.showBalls && <ShowBalls /> }
+        <>
+            {app.secondCanvas.tracking && <SecondCanvas />}
+        </>
     </>
     )
 }

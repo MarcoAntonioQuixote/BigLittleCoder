@@ -33,7 +33,6 @@ const useInstructions = (next,specialValue) => {
             setApp({type: 'goToPage', payload: path})
         }
         if (isValidPath) {
-            console.log('on first render?');
             path = path === '' ? 'Home' : path;
             payload = instructions[path];
             setApp({type: 'setInstructions', payload})
