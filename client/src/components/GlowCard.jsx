@@ -1,13 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-function GlowCard({info}) {
+function GlowCard({info, setOpen, openModal, doNothing}) {
+
+    const navigate = useNavigate();
 
     //TODO - this is such as nice card - use it later, fix this.
 
+
+    //TODO: this is too bad - fixed (open modal!)
+
     const enlarge = info.enlarge ? 'glowIcon' : '';
     const video = info.video ? 'glowVideo' : '';
-
-    console.log(video);
 
     if (info.toHide) {
         return (
@@ -15,10 +19,19 @@ function GlowCard({info}) {
         )
     }
 
+    const openInformationModal = () => {
+        if (doNothing) return;
+        if (!openModal) {
+            navigate('/contact');
+            return
+        };
+        setOpen(true);
+    }
+
     return (
         <div className="box">
             <span></span>
-            <div className="content">
+            <div onClick={openInformationModal} className="content">
                 <h2>{info.title}</h2>
                 <p>{info.text}</p>
                 {/* <a href="#">Read More</a> */}

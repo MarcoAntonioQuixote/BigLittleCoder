@@ -15,6 +15,7 @@ export default function ContactForm() {
     const {app} = useContext(AppContext);
 
     const [data,setData] = useState({});
+    const [sent,setSent] = useState(false);
 
     const handleChange = (e, checked, name) => {
         let prop = e.target.name;
@@ -23,7 +24,7 @@ export default function ContactForm() {
         setData(prev => ({...prev, [prop]: value}));
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         let errors = [];
         
         const namePattern = /^[a-zA-Z-.\s]{2,25}$/;
@@ -54,13 +55,22 @@ export default function ContactForm() {
             let individual = data.individual ? true : false;
             let cohorts = data.cohorts ? true : false;
             let submission = {...data,individual,cohorts};
-            useEmail(submission,app);
+            let res = await useEmail(submission,app);
+            if (res) {
+              setSent(true)
+            } else {
+              alert('There was an error processing your request 😢');
+            }
         }
     };
     
 
     return (
-        <form >
+
+      <>      
+        { sent ? <h2>Sent A-okay!</h2> :
+
+        <form style={{marginTop: '30px'}} >
             <FormControl className='formElement' required>
                 <Label>Name</Label>
                 <StyledInput name='name' onChange={handleChange} placeholder="What's your name?" />
@@ -88,6 +98,9 @@ export default function ContactForm() {
             </FormControl>
             <Button className='fixSize' variant='contained' onClick={handleSubmit}>Submit</Button>           
         </form>
+        }
+      </>
+
     );
 }
 

@@ -5,7 +5,7 @@ import GlowCard from '../GlowCard';
 
 function TechStack() {
 
-    const showTiles = techTiles.map((tile,i) => <GlowCard key={i} info={tile} />)
+    const showTiles = techTiles.map((tile,i) => <GlowCard key={i} info={tile} doNothing={true} />) //TODO remove doNOTHING
 
     return (
         <>        

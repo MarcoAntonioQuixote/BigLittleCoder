@@ -20,7 +20,7 @@ a {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 400px;
-    border: 3px solid #ff00aac8;
+    border: 3px solid #ff00aac6;
     border-radius: 16px;
     background-color: rgb(19, 9, 46);
     box-shadow: 8px 8px 8px rgba(252, 251, 252, 0.5);
@@ -42,6 +42,10 @@ a {
     color: white;
     position: absolute;
     top: 32.5vh;
+}
+
+.fixSize.button.markAnthony {
+    top: 30vh;
 }
 
 .fixSize.cohort {
@@ -75,4 +79,8 @@ a {
     border: none;
     box-shadow: none;
     outline: none;
+}
+
+#infoModal {
+    width: 60vw;
 }

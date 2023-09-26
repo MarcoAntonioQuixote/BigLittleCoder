@@ -4,16 +4,8 @@ let balls = [
 
 const portfolioTiles = [
     {
-        image: 'https://media.wired.com/photos/5d69aa67f919890009997643/master/w_2560%2Cc_limit/Oped-AI-Protecting-Black%2520and%2520Brown%2520Diaspora-LS011379.jpg',
-        text: <h2><span>Connect</span> across the 🌍 with <span>Socket.IO</span></h2>,
-    },
-    {
-        image: 'https://nestle-nespresso.com/sites/site.prod.nestle-nespresso.com/files/styles/crop_freeform/public/Nespresso-Signs-UN-Womens-Empowerment-Principles_1140x500.jpg?itok=RYftaEAm',
-        text: <h2>Master <span>AI Integration</span> 🤖 for a smarter app experience </h2>
-    },
-    {
-        image: 'https://i.pinimg.com/736x/3c/e4/39/3ce439a152a704da5f7e52c6902689ab.jpg',
-        text: <h2>Bring the front and back end <span>together 🫂</span> with NodeJS</h2>
+        image: '/textures/balls/model5.jpg',
+        text: <h2><span>Connect</span> with the 🌍, <span>whenever</span> and wherever you can </h2>,
     },
     {
         image: '/textures/balls/water5.jpg',
@@ -24,20 +16,32 @@ const portfolioTiles = [
         text:<h2>Think like a <span>machine</span>, only better 🧠</h2>
     },
     {
+        image: '/textures/balls/puppy1.jpg',
+        text: <h2><span>Puppy 🐕</span></h2>
+    },
+    {
         image: '/textures/balls/water2.jpg',
         text: <h2>Build <span>dreams</span>, not just apps 🌈</h2>
     },
     {
-        image: 'https://sp-ao.shortpixel.ai/client/to_webp,q_lossless,ret_img/https://www.webtekcc.com/wp-content/uploads/2015/07/wireframe-1024x628.jpg',
-        text: <h2><span>React</span> to user needs, one component at a time ⚛️</h2>,
+        image: '/textures/balls/water4.jpg',
+        text: <h2>Step <span>outside</span> of 2️⃣D, with <span>BLC</span></h2>
     },
     {
-        image: 'https://www.framezhouse.com/wp-content/uploads/2023/04/3D-animation.jpg',
-        text: <h2>From concept to code with <span>Wire Framing</span> 🎨</h2>
+        image: '/textures/balls/model2.jpg',
+        text: <h2><span>Stand up</span> for all the <span>good</span> you believe in ✊🏽</h2>
     },
     {
-        image: 'https://poole.ncsu.edu/news/wp-content/uploads/sites/15/2020/04/social-media_shutterstock-1500x844-1.jpg',
-        text: <h2>Step <span>outside</span> of the 2nd dimension, with <span>R3F</span></h2>
+        image: '/textures/balls/model1.jpg',
+        text: <h2><span>Model</span> your best behavior 😎</h2>
+    },
+    {
+        image: '/textures/balls/water7.jpg',
+        text: <h2><span>Perspective</span> signed, <span>Water Tribe</span> 🌊</h2>
+    },
+    {
+        image: '/textures/balls/model3.jpg',
+        text: <h2><span>Jump</span> like you can <span>fly</span> 🦚</h2>
     },
 ]
 
@@ -77,7 +81,7 @@ const techTiles = [
 ]
 
 const coachingOptions = [
-    {title: 'Cohorts', video: true, text: 'Ready to take a deep dive into the world of coding? Join our highly interactive cohorts and elevate your coding skills through collaborative learning.', image: '/gifs/blcVideo.gif'},
+    {title: 'Cohorts', video: true, text: 'Ready to take a deep dive into the world of coding? Join our highly interactive cohorts and elevate your coding skills through collaborative learning.', image: '/gifs/blcVideo.gif', link: '/cohorts'},
     {toHide: true},
     {title: '1-on-1', video: true, text: "Get personalized, expert guidance to fast-track your coding journey with our 1-on-1 coaching sessions. Don't just learn to code—master it.", image: '/gifs/coder4.gif'},
 ]
