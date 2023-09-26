@@ -7,7 +7,7 @@ const instructions = {
     speaker: `Cool! Let's check out this journey together!`,
     Home: `Big Little Coder helps you dream big with little baby steps along the way. 👟`,
     Cohorts: 'Want to learn in a group setting? Radical!',
-    '1-on-1': 'What about 1-on-1s!',
+    TechStack: `What's in the stack? What are we learning?`,
     Projects: `Check out this featured project we're working on! First to not get caught by 10 fires wins! It only works if you play with a friend! 🔥`,
     MarkAnthony: `He's a cool guy - he helped bring me and my friends to life! 🔥`
 }

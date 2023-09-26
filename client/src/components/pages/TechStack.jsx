@@ -1,6 +1,6 @@
 import React from 'react';
 
-function OneOnOne() {
+function TechStack() {
 
     return (
         <div className='pageInSpeakerWindow aroundOnPage'>
@@ -9,4 +9,4 @@ function OneOnOne() {
     )
 }
 
-export default OneOnOne;
+export default TechStack;

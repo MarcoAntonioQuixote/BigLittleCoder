@@ -14,7 +14,7 @@ export const appObject =
     assigned: [
         { page: "", speaker: null },
         { page: "Cohorts", speaker: null },
-        { page: "1-on-1", speaker: null },
+        { page: "TechStack", speaker: null },
         { page: "Projects", speaker: null },
         { page: "MarkAnthony", speaker: null }
     ],

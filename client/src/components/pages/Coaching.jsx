@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import { AppContext } from '../../storeManagement/AppContext';
 import { Button } from '@mui/material';
 
-function Cohorts() {
+function Coaching() {
 
     const {setApp} = useContext(AppContext);
 
@@ -24,4 +24,4 @@ function Cohorts() {
     )
 }
 
-export default Cohorts
+export default Coaching
