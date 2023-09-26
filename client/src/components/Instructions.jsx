@@ -11,6 +11,7 @@ function Instructions() {
     let instructions = app.instructions;
     let page = app.status.currentPage;
     let reposition;
+    let setMobile; //TODO remove later!
     switch(page) {
         case '': reposition = 'convo';
             break;
@@ -19,12 +20,13 @@ function Instructions() {
         case 'contact' : reposition = 'noInstructions';
             break;
         default: reposition = 'started';
+            setMobile = true;
     }
 
     if (!instructions) return null;
 
     return (    
-        <div className={`instructions ${reposition}`} >
+        <div className={`instructions ${reposition}`} id={setMobile ? 'instructions' : null}>
             <Typewriter
                 key={instructions}
                 words={[instructions]} 

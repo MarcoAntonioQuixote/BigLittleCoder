@@ -35,7 +35,7 @@ function MarkAnthony() {
                 {showTiles}
             </Marquee>
 
-            <div style={{display: 'flex', justifyContent: 'space-around', width: '100%'}}>
+            <div id='maLabels' style={{display: 'flex', justifyContent: 'space-around', width: '100%'}}>
                 <span>passionate</span><span>ready to teach</span><span>eager to learn</span>
             </div>
             <Button className='fixSize button markAnthony' variant='text'>

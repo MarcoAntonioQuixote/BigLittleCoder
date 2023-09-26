@@ -48,27 +48,46 @@ body {
     }
 
     #webLogo {
+        padding-top: 2vh;
         height: 7vh;
     }
 
     #chatWithBot {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .gradHover {
-        width: 350px;
-        height: 350px;
+        width: 60vw;
+        height: 60vw;
+        font-size: large;
     }
 
     .balls3D {
-        position: absolute !important;
-        top: 0px !important;
+        position: fixed !important;
+        bottom: 100px !important;
         left: 0px !important;
-        transform: translate(100%, 50%);
+        /* transform: translate(100%, 50%); */
     }
 
     .instructions {
         font-size: 13px;
+        position: fixed !important;
+        top: 10vh !important;
+        /* top: -25px !important; */
+    }
+
+    #instructions {
+        /* border: solid red 2px; */
+        position: fixed;
+        top: -100px !important;
+    }
+
+    .sceneContainer {
+        height: 50vh;
+    }
+
+    #headerMA, #maLabels {
+        display: none !important;
     }
 }
 
