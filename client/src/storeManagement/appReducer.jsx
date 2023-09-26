@@ -6,17 +6,6 @@ const appReducer = (state,action) => {
     let {type,payload} = action;
 
     switch(type) {
-        case 'mouseMove':
-            //save an array of 10-12
-            movement.unshift(payload);
-            if (movement.length > 10) {
-                movement.pop();
-            }
-            break;
-        case 'catchUp':
-            movement.unshift(movement[0]);
-            movement.pop();
-            break;
         case 'selectMonster':
             monster.name = payload;
             break;
@@ -46,7 +35,11 @@ const appReducer = (state,action) => {
         case 'setInstructions':
             newState.instructions = payload;
             break;
+        case 'setPage':
+            status.currentPage = payload;
+            break;
         case 'goToPage':
+            status.currentPage = payload;
             let newMon = newState.assigned.find(a => a.page === payload);
             status.next = newMon;
             status.transitioning = true;

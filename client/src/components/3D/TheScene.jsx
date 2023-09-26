@@ -18,7 +18,7 @@ function TheScene() {
             <Suspense fallback={null}>
                 {/* <GetModels/> */}
                 <SceneActors />
-                {app.showBalls && <ShowBalls />}
+                {/* {app.showBalls && <ShowBalls />} */}
             </Suspense>
             <OrbitControls/>
             {/* <Grid /> */}

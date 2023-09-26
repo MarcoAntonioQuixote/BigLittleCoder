@@ -9,6 +9,7 @@ export const appObject =
         started: false, //selected (passed selection mode)
         transitioning: false,
         next: null,
+        currentPage: null,
     },
     assigned: [
         { page: "", speaker: null },

@@ -5,6 +5,7 @@ import Instructions from '../Instructions';
 import LRScrollSelection from '../LRScrollSelection';
 import { AppContext } from '../../storeManagement/AppContext';
 import SpeakerWindow from '../SpeakerWindow';
+import ShowBalls from './ShowBalls';
 
 function The3DCanvas() {
 
@@ -21,7 +22,7 @@ function The3DCanvas() {
     }
 
     return (
-        <>        
+    <>        
         <div className="theWorld">
             <World/>
         </div>
@@ -34,7 +35,8 @@ function The3DCanvas() {
             </div>
             </LRScrollSelection>
         </div>
-        </>
+        { app.showBalls && <ShowBalls /> }
+    </>
     )
 }
 

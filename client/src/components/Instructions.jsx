@@ -9,8 +9,18 @@ function Instructions() {
     const {app} = useContext(AppContext);
 
     let instructions = app.instructions;
-    let page = app.status.next?.page;
-    let reposition = page === '' ? 'convo' : 'started';
+    let page = app.status.currentPage;
+    console.log(page);
+    let reposition;
+    switch(page) {
+        case '': reposition = 'convo';
+            break;
+        case 'MarkAnthony': reposition = 'portfolio';
+            break;
+        case 'contact' : reposition = 'noInstructions';
+            break;
+        default: reposition = 'started';
+    }
 
     if (!instructions) return null;
 

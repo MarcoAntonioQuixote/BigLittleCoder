@@ -61,3 +61,16 @@
     mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
     width: 98%;
 }
+
+.super {
+    z-index: 1;
+    position: absolute;
+    top: -30px;
+    border: solid white 2px;
+    padding: 5px 10px;
+    border-radius: 16px;
+    background: rgba(21, 21, 21, 0.65);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    border: 1px solid rgba(21, 21, 21, 0.3);
+}

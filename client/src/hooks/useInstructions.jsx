@@ -20,7 +20,10 @@ const useInstructions = (next,specialValue) => {
         let path = location.pathname.slice(1);
         let paths = app.assigned.map(a => a.page);
         let isValidPath = paths.includes(path);
-        if (!isValidPath) return;
+        if (!isValidPath) {
+            setApp({type: 'setPage',payload: path});
+            return;
+        }
         let payload;
         if (!app.status.started) {
             setApp({type: 'setInstructions', payload: instructions['selection']});

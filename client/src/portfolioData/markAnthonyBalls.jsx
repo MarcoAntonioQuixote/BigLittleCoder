@@ -1,22 +1,6 @@
 let balls = [
-    { image: 'textures/balls/water7.jpg', rotation: [1,-.25,0], position: [-2,1,1]},
+    { image: 'textures/balls/water7.jpg', rotation: [.7,-.25,0], position: [0,0,0]},
 ]
-
-const data = [
-    {
-        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample41.jpg',
-        text: <h2>I think <span>nighttime</span> is dark</h2>,
-    },
-    {
-        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample42.jpg',
-        text: <h2>I suppose if we couldn't <span>laugh</span></h2>,
-    },
-    {
-        image: 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample43.jpg',
-        text: <h2>I think the <span>surest</span> sign</h2>,
-    }
-];
-
 
 const portfolioTiles = [
     {
@@ -57,7 +41,7 @@ const portfolioTiles = [
     },
 ]
 
-export { balls, portfolioTiles, data }
+export { balls, portfolioTiles }
 
 //<sphereGeometry args={[1,32,32]} />
 

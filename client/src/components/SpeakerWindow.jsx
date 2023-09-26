@@ -9,7 +9,7 @@ function SpeakerWindow() {
     
         const setSpeakerPane = () => {
 
-            console.log('re-running')
+            // TODO: why does this keep re-rendering console.log('re-running')
             
             const rect = document.getElementById('copyGlass').getBoundingClientRect();
 
