@@ -76,6 +76,22 @@ body {
         /* top: -25px !important; */
     }
 
+    #infoModal {
+        scale: .6;
+        width: 100vw;
+        position: relative;
+        top: 100px;
+        left: 100px;
+    }
+
+    form {
+        font-size: 10px;
+        scale: .7;
+        position: absolute;
+        top: -100px;
+        left: 0px;
+    }
+
     #instructions {
         /* border: solid red 2px; */
         position: fixed;
