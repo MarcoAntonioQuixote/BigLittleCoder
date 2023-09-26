@@ -10,6 +10,16 @@
   flex-wrap: wrap;
   padding: 40px 0;
   font-family: consolas;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  -ms-overflow-style: none;
 }
 
 .container .box 

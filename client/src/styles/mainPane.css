@@ -36,8 +36,6 @@
     position: relative;
 }
 
-
-
 .centerOnPage {
     justify-content: center;
 }
@@ -87,15 +85,17 @@
 }
 
 .coaching {
-    justify-content: space-around;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 75%;
+    height: 100%;
 }
 
-#cohortGif {
-    width: 50%;
+.coachingGif {
+    width: 50vw;
+    height: 25vw;
+    object-fit: cover;
     border-radius: 5px;
     border: solid rgba(255, 255, 255, 0.263);
-    box-shadow: 0 0 20px 15px #ff009d;
+    box-shadow: 0 0 10px 5px #ff009d;
 }

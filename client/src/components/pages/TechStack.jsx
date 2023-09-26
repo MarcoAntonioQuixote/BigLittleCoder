@@ -17,7 +17,7 @@ function TechStack() {
 
 export default TechStack;
 
-//special thanks
+//super special thanks
 
 //https://codepen.io/kodplay/pen/oNBreRJ
 
