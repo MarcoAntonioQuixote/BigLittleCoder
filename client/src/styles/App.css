@@ -39,6 +39,39 @@ body {
     margin-left: 2vw;
 }
 
+@media only screen and (max-width: 800px) {
+    #navLinks {
+      max-width: 100vw !important;
+      font-size: 10px;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    #webLogo {
+        height: 7vh;
+    }
+
+    #chatWithBot {
+        font-size: 3rem;
+    }
+
+    .gradHover {
+        width: 350px;
+        height: 350px;
+    }
+
+    .balls3D {
+        position: absolute !important;
+        top: 0px !important;
+        left: 0px !important;
+        transform: translate(100%, 50%);
+    }
+
+    .instructions {
+        font-size: 13px;
+    }
+}
+
 .stateInfo {
     position: fixed;
 	bottom: 200px;

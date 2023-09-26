@@ -52,6 +52,7 @@ function Home() {
                 maxLength={200}
                 onChange={handlePrompt}
                 value={prompt}
+                id='chatWithBot'
             />
 
             <Button ref={buttonRef} onClick={hasResponded ? reset : chatReq} className='fixSize button' variant='text'>
