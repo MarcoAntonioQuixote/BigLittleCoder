@@ -1,12 +1,18 @@
-import React, {useState,useEffect} from 'react';
+import React, {useState,useEffect, useContext} from 'react';
 import AppRoutes from './AppRoutes';
+import { AppContext } from '../storeManagement/AppContext';
 
 function SpeakerWindow() {
+
+    const {app} = useContext(AppContext);
 
     function SetGlass() {
 
         const [placement,setPlacement] = useState({});
-    
+        const onTS = app.status.currentPage === 'TechStack';
+        let darken = onTS ? 'darken' : '';
+        console.log(darken);
+
         const setSpeakerPane = () => {
 
             // TODO: why does this keep re-rendering console.log('re-running')
@@ -32,7 +38,7 @@ function SpeakerWindow() {
         }, []);
     
         return (
-            <div className='glass putBehind' style={placement}></div>
+            <div className={`glass putBehind ${darken}`} style={placement}></div>
         )
     }
 

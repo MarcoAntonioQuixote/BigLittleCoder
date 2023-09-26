@@ -1,6 +1,7 @@
 @import './importedEffects/navHover.css';
 @import './importedEffects/gradientHover.css';
 @import './importedEffects/textSlider.css';
+@import './importedEffects/glowCards.css';
 
 * {
     box-sizing: border-box;
