@@ -8,12 +8,19 @@ function TechStack() {
     const showTiles = techTiles.map((tile,i) => <GlowCard key={i} info={tile} />)
 
     return (
-        <div className='pageInSpeakerWindow aroundOnPage'>
-            <div className="container">
-                {showTiles}
+        <>        
+            <div className='pageInSpeakerWindow aroundOnPage'>
+                <div className="container">
+                    {showTiles}
+                </div>
             </div>
-        </div>
+            <div class="arrow"></div>
+        </>
     )
 }
 
 export default TechStack;
+
+//special thanks:
+
+//https://codepen.io/JoshMac/pen/MaYEmJ

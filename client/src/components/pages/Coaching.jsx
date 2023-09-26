@@ -17,11 +17,14 @@ function Coaching() {
     const showTiles = coachingOptions.map((option,i) => <GlowCard key={i} info={option} />)
 
     return (
-        <div className='pageInSpeakerWindow coaching'>
-            <div className="container">
-                {showTiles}
+        <>        
+            <div className='pageInSpeakerWindow coaching'>
+                <div className="container coachingCards">
+                    {showTiles}
+                </div>
             </div>
-        </div>
+            <div class="arrow arrowHide"></div>
+        </>
     )
 }
 
