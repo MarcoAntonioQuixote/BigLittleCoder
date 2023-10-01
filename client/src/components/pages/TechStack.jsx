@@ -1,6 +1,6 @@
 import React from 'react';
 import { techTiles } from '../../portfolioData/markAnthonyBalls';
-import GlowCard from '../GlowCard';
+import GlowCard from '../reusable/GlowCard';
 
 
 function TechStack() {
@@ -9,7 +9,7 @@ function TechStack() {
 
     return (
         <>        
-            <div className='pageInSpeakerWindow aroundOnPage'>
+            <div className='pageInSpeakerWindow'>
                 <div className="container">
                     {showTiles}
                 </div>

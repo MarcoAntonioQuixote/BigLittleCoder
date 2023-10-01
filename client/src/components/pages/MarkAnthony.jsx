@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import { AppContext } from '../../storeManagement/AppContext';
 import {portfolioTiles} from '../../portfolioData/markAnthonyBalls';
-import CaptionCard from '../CaptionCard';
+import CaptionCard from '../reusable/CaptionCard';
 import Marquee from 'react-fast-marquee';
 import { Button } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -27,7 +27,7 @@ function MarkAnthony() {
 
     return (
         <div className='pageInSpeakerWindow align'>
-            <div id='headerMA' className='super'>
+            <div id='headerMA' className='MA-header'>
                 Mark Anthony | A Portfolio
             </div>
 

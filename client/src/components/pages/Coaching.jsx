@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import { AppContext } from '../../storeManagement/AppContext';
-import GlowCard from '../GlowCard';
+import GlowCard from '../reusable/GlowCard';
 import { coachingOptions } from '../../portfolioData/markAnthonyBalls';
-import MoreInfoModal from '../MoreInfoModal';
+import MoreInfoModal from '../reusable/MoreInfoModal';
 
 function Coaching() {
 
@@ -20,7 +20,7 @@ function Coaching() {
 
     return (
         <>        
-            <div className='pageInSpeakerWindow coaching'>
+            <div className='pageInSpeakerWindow '>
                 <div className="container coachingCards">
                     {showTiles}
                 </div>

@@ -92,3 +92,5 @@ export { balls, portfolioTiles, techTiles, coachingOptions }
 
 // { image: 'textures/balls/water1.jpg', rotation: [.5,5,0], position: [1,1,1]},
 // { image: 'textures/balls/water5.jpg', rotation: [.7,-2,.4], position: [2,1,1]},
+
+//TODO: There is a third option that we should remove (instead, colors might need to be saved in JS instead of CSS - where they are defined from 1-6)

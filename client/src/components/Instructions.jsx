@@ -12,6 +12,7 @@ function Instructions() {
     let page = app.status.currentPage;
     let reposition;
     let setMobile; //TODO remove later!
+    
     switch(page) {
         case '': reposition = 'convo';
             break;

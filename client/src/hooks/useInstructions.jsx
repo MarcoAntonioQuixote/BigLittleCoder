@@ -40,7 +40,7 @@ const useInstructions = (next,specialValue) => {
 
     },[location]);
     //make it dynamic by using specialValue
-    return instructions[next];
+    // return instructions[next];
 }
 
 export default useInstructions;

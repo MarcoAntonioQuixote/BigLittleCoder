@@ -1,6 +1,6 @@
 import React from 'react';
 import { projects } from '../../portfolioData/projectData';
-import HoverCard from '../HoverCard';
+import HoverCard from '../reusable/HoverCard';
 
 function Projects() {
 

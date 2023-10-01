@@ -15,7 +15,7 @@ async function useEmail(form,app) {
         // .then(
         //     res => console.log(res.text), 
         //     err => console.log(err.text)
-        // )
+        // ) TODO: finalize tests
 }
 
 export default useEmail

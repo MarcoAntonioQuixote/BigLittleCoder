@@ -1,12 +1,4 @@
-.speakerWindow {
-    position: fixed;
-    top: 20vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80vw;
-    height: 40vh;
-    border-radius: 16px;
-}
+@import './importedEffects/arrow.css';
 
 .glass {
     /* From https://css.glass */
@@ -28,8 +20,7 @@
 
 .pageInSpeakerWindow {
     font-weight: 100;
-    width: 80%;
-    min-width: 100%;
+    width: 100%;
     margin: auto;
     margin-top: 5%;
     display: flex;
@@ -51,101 +42,3 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-
-.scrollButton {
-    height: 250px;
-}
-
-#scrollSelect {
-    position: absolute;
-    bottom: 50px;
-}
-
-.marquee {
-    -webkit-mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
-    mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
-    width: 98%;
-}
-
-.super {
-    z-index: 1;
-    position: absolute;
-    top: -30px;
-    border: solid white 2px;
-    padding: 5px 10px;
-    border-radius: 16px;
-    background: rgba(21, 21, 21, 0.65);
-    backdrop-filter: blur(7.9px);
-    -webkit-backdrop-filter: blur(7.9px);
-    border: 1px solid rgba(21, 21, 21, 0.3);
-}
-
-.showCohort {
-    width: 600px;
-    height: 400px;
-}
-
-.coaching {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: 100%;
-}
-
-.coachingGif {
-    width: 50vw;
-    height: 25vw;
-    object-fit: cover;
-    border-radius: 5px;
-    border: solid rgba(255, 255, 255, 0.263);
-    box-shadow: 0 0 10px 5px #ff009d;
-}
-
-
-.arrow,
-.arrow:before {
-    position: absolute;
-    right: 4%; /* Adjusted for bottom-right corner */
-}
-  
-.arrow {
-    width: 20px;
-    height: 20px;
-    bottom: 4%; /* Adjusted for bottom-right corner */
-    transform: rotate(45deg);
-    border-left: none;
-    border-top: none;
-    border-right: 2px solid #fff;
-    border-bottom: 2px solid #fff;
-}
-  
-.arrow:before {
-    content: '';
-    width: 20px;
-    height: 20px;
-    bottom: 5%;
-    margin: -10px 0 0 -10px;
-    border-left: none;
-    border-top: none;
-    border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-name: arrow;
-}
-  
-@keyframes arrow {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-10px, -10px);
-    }
-}
-  
-
-  
-  
-  
-  

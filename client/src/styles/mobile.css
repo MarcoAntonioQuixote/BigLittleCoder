@@ -1,0 +1,67 @@
+@media only screen and (max-width: 800px) {
+    #navLinks {
+      max-width: 100vw !important;
+      font-size: 10px;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    #webLogo {
+        padding-top: 2vh;
+        height: 7vh;
+    }
+
+    #chatWithBot {
+        font-size: 2.5rem;
+    }
+
+    .gradHover {
+        width: 60vw;
+        height: 60vw;
+        font-size: large;
+    }
+
+    .balls3D {
+        position: fixed !important;
+        bottom: 100px !important;
+        left: 0px !important;
+        /* transform: translate(100%, 50%); */
+    }
+
+    .instructions {
+        font-size: 13px;
+        position: fixed !important;
+        top: 10vh !important;
+        /* top: -25px !important; */
+    }
+
+    #infoModal {
+        scale: .6;
+        width: 100vw;
+        position: relative;
+        top: 100px;
+        left: 100px;
+    }
+
+    form {
+        font-size: 10px;
+        scale: .7;
+        position: absolute;
+        top: -100px;
+        left: 0px;
+    }
+
+    #instructions {
+        /* border: solid red 2px; */
+        position: fixed;
+        top: -100px !important;
+    }
+
+    .sceneContainer {
+        height: 50vh;
+    }
+
+    #headerMA, #maLabels {
+        display: none !important;
+    }
+}

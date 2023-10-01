@@ -1,0 +1,27 @@
+.chatWithMonster {
+    position: relative;
+    top: 12vh;
+    color: white;
+    text-decoration: none;
+    opacity: 1;
+    padding: 10px;
+    font-size: 3.2rem;
+    background-color: transparent;
+    width: 80%;
+    resize: none;
+    border: none;
+}
+
+.chatWithMonster::placeholder {
+    color: white;
+}
+
+.chatWithMonster:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.instructions.convo {
+    top: 5vh;
+}

@@ -1,7 +1,8 @@
 import { useContext, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { AppContext } from '../storeManagement/AppContext';
+
 import LinkModal from './LinkModal';
+import { AppContext } from '../../storeManagement/AppContext';
 
 function SpecialLink({link}) {
     const {app} = useContext(AppContext);

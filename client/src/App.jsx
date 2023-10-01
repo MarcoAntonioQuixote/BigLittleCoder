@@ -9,7 +9,7 @@ import The3DCanvas from './components/3D/The3DCanvas';
 
 function App() {
     const [app,setApp] = useReducer(appReducer,appObject);
-
+    
     //learned I didn't have to put routes here
 
     return (

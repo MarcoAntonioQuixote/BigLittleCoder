@@ -3,17 +3,6 @@
 @import './importedEffects/textSlider.css';
 @import './importedEffects/glowCards.css';
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
 .modal {
     position: absolute;
     top: 50%;
@@ -26,6 +15,33 @@ a {
     box-shadow: 8px 8px 8px rgba(252, 251, 252, 0.5);
     padding: 40px;
     color: white;
+}
+
+#infoModal {
+    width: 60vw;
+}
+
+.marquee {
+    -webkit-mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
+    width: 98%;
+}
+
+/*character selection screen*/
+
+.toggleCharButton {
+    height: 250px;
+}
+
+#charSelect {
+    position: absolute;
+    bottom: 50px;
+}
+
+/* forms and buttons below! */
+
+.formElement {
+    margin-top: 10px;
 }
 
 .fixSize {
@@ -53,34 +69,3 @@ a {
     color: white;
 }
 
-.formElement {
-    margin-top: 10px;
-}
-
-.chatWithMonster {
-    position: relative;
-    top: 12vh;
-    color: white;
-    text-decoration: none;
-    opacity: 1;
-    padding: 10px;
-    font-size: 3.2rem;
-    background-color: transparent;
-    width: 80%;
-    resize: none;
-    border: none;
-}
-
-.chatWithMonster::placeholder {
-    color: white;
-}
-
-.chatWithMonster:focus {
-    border: none;
-    box-shadow: none;
-    outline: none;
-}
-
-#infoModal {
-    width: 60vw;
-}

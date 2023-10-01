@@ -10,8 +10,8 @@ function GlowCard({info, setOpen, openModal, doNothing}) {
 
     //TODO: this is too bad - fixed (open modal!)
 
-    const enlarge = info.enlarge ? 'glowIcon' : '';
-    const video = info.video ? 'glowVideo' : '';
+    const enlarge = info.enlarge ? 'enlargeIcon' : '';
+    const isVideo = info.video ? 'glowVideo' : 'glowIcon';
 
     if (info.toHide) {
         return (
@@ -35,7 +35,7 @@ function GlowCard({info, setOpen, openModal, doNothing}) {
                 <h2>{info.title}</h2>
                 <p>{info.text}</p>
                 {/* <a href="#">Read More</a> */}
-                <img className={`${enlarge} ${video}`} style={{width: '50px'}} src={info.image} alt="" />
+                <img className={`${enlarge} ${isVideo}`} src={info.image} alt="" />
             </div>
         </div>
     )
