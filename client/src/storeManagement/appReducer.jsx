@@ -52,10 +52,10 @@ const appReducer = (state,action) => {
             }
             break;
         case 'track':
-            newState.secondCanvas.tracking = payload;
-            console.log('track', newState);
+            newState.secondCanvas.tracking = payload; //like balls
             break;
         }
+        console.log(newState.status.currentPage);
         return newState;
 }
 

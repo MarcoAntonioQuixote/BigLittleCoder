@@ -14,7 +14,7 @@ function TechStack() {
                     {showTiles}
                 </div>
             </div>
-            <div class="arrow"></div>
+            <div className="arrow"></div>
         </>
     )
 }

@@ -28,10 +28,10 @@ function MarkAnthony() {
     return (
         <div className='pageInSpeakerWindow align'>
             <div id='headerMA' className='MA-header'>
-                Mark Anthony | A Portfolio
+                Mark Anthony | A Portfolio | Words Here
             </div>
 
-            <Marquee className='marquee' pauseOnHover={true} speed={125} >
+            <Marquee className='marquee' speed={125} >
                 {showTiles}
             </Marquee>
 

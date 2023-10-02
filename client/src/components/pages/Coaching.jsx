@@ -25,7 +25,7 @@ function Coaching() {
                     {showTiles}
                 </div>
             </div>
-            <div class="arrow arrowHide"></div>
+            <div className="arrow arrowHide"></div>
             <MoreInfoModal open={open} setOpen={setOpen} />
         </>
     )

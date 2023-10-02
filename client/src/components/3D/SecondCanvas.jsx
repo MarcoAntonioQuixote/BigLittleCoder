@@ -42,5 +42,3 @@ function SecondCanvas() {
 }
 
 export default SecondCanvas;
-
-//className={subStyles} style={placement}

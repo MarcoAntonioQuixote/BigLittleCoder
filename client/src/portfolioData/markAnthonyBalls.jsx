@@ -81,9 +81,22 @@ const techTiles = [
 ]
 
 const coachingOptions = [
-    {title: 'Cohorts', video: true, text: 'Ready to take a deep dive into the world of coding? Join our highly interactive cohorts and elevate your coding skills through collaborative learning.', image: '/gifs/blcVideo.gif', link: '/cohorts'},
-    {toHide: true},
-    {title: '1-on-1', video: true, text: "Get personalized, expert guidance to fast-track your coding journey with our 1-on-1 coaching sessions. Don't just learn to code—master it.", image: '/gifs/coder4.gif'},
+    {
+        title: 'Cohorts', 
+        video: true, 
+        text: 'Ready to take a deep dive into the world of coding? Join our highly interactive cohorts and elevate your coding skills through collaborative learning.', 
+        image: '/gifs/blcVideo.gif', 
+        link: '/cohorts'},
+    {
+        toHide: true
+    },
+    {
+        title: '1-on-1', 
+        video: true, 
+        text: "Get personalized, expert guidance to fast-track your coding journey with our 1-on-1 coaching sessions. Don't just learn to code—master it.", 
+        image: '/gifs/coder4.gif',
+        link: '/1-on-1'
+    },
 ]
 
 export { balls, portfolioTiles, techTiles, coachingOptions }

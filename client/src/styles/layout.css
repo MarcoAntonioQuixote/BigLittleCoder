@@ -32,7 +32,6 @@
     height: 30vh;
     width: 80%;
     max-width: 600px;
-    /* border: solid 2px green; */
 }
 
 .expandedScene {
@@ -54,7 +53,7 @@
 
 .instructions {
     padding: 15px;
-    width: 60%;
+    /* width: min(60vw,700px); */
     position: absolute;
     top: 0px;
     left: 50%;
@@ -67,11 +66,12 @@
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     border: 1px solid rgba(21, 21, 21, 0.3);
-    font-size: 2vw;
+    font-size: clamp(10px,3vw,40px);
 }
 
 .instructions.started {
-    top: 35vh
+    top: 35vh;
+    width: min(700px,60vw);
 }
 
 .instructions.portfolio {

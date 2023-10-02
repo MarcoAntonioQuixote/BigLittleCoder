@@ -1,4 +1,4 @@
-.chatWithMonster {
+#chatWithMonster {
     position: relative;
     top: 12vh;
     color: white;
@@ -12,11 +12,11 @@
     border: none;
 }
 
-.chatWithMonster::placeholder {
+#chatWithMonster::placeholder {
     color: white;
 }
 
-.chatWithMonster:focus {
+#chatWithMonster:focus {
     border: none;
     box-shadow: none;
     outline: none;

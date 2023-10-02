@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import LinkModal from './LinkModal';
@@ -17,6 +17,10 @@ function SpecialLink({link}) {
             break;
     }
 
+    useEffect(() => {
+        console.log('open inside of sl', open);
+    }, [open])
+
     let focus = `/${link}` === path ? 'navFocus' : 'navNoFocus';
     let split = [...link];
 
@@ -33,7 +37,7 @@ function SpecialLink({link}) {
 
     return (
     <>
-        <Link onClick={() => setOpen(true)} to={link} className={focus}>
+        <Link onClick={() => {console.log('clicked'); setOpen(true)}} to={link} className={focus}>
             <h2 >
                 {showSplit}
             </h2>

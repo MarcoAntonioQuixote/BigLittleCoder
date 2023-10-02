@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState, useRef } from 'react';
 import { AppContext } from '../../storeManagement/AppContext';
-import { returnText } from '../../portfolioData/randomMonsterInfo';
 import { Button } from '@mui/material';
 import useOpenAI from '../../hooks/useOpenAI';
+import dynamicText from '../../portfolioData/randomMonsterInfo';
 
 function Home() {
 
@@ -17,11 +17,11 @@ function Home() {
         if (charNum === 0 && hasResponded) {
             setApp({type: 'setInstructions', payload: 'Whoa'})
         } else if (charNum === 1) {
-            setApp({type: 'setInstructions', payload: returnText('start')})
+            setApp({type: 'setInstructions', payload: dynamicText('chatStart')})
         } else if (charNum === 100) {
-            setApp({type: 'setInstructions', payload: returnText('halfway')})
+            setApp({type: 'setInstructions', payload: dynamicText('chatHalfway')})
         } else if (charNum === 193) {
-            setApp({type: 'setInstructions', payload: returnText('end')})
+            setApp({type: 'setInstructions', payload: dynamicText('chatEnd')})
         }
     }, [prompt]);
 
@@ -39,20 +39,19 @@ function Home() {
 
     const reset = () => {
         setHasResponded(false);
-        setApp({type: 'setInstructions', payload: returnText('reset')})
+        setApp({type: 'setInstructions', payload: dynamicText('chatReset')})
     }
 
     return (
         <div className='pageInSpeakerWindow centerOnPage'>
             <textarea type="text" 
                 placeholder={hasResponded ? '' : 'Ask me anything...'}
-                className='chatWithMonster'
                 rows={6}
                 autoFocus
                 maxLength={200}
                 onChange={handlePrompt}
                 value={prompt}
-                id='chatWithBot'
+                id='chatWithMonster'
             />
 
             <Button ref={buttonRef} onClick={hasResponded ? reset : chatReq} className='fixSize button' variant='text'>

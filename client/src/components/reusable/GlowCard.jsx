@@ -21,11 +21,12 @@ function GlowCard({info, setOpen, openModal, doNothing}) {
 
     const openInformationModal = () => {
         if (doNothing) return;
-        if (!openModal) {
-            navigate('/contact');
-            return
-        };
-        setOpen(true);
+        navigate(info.link)
+        // if (!openModal) {
+        //     navigate('/contact');
+        //     return
+        // };
+        // setOpen(true);
     }
 
     return (
