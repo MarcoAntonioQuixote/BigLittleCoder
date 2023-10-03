@@ -21,11 +21,6 @@
     width: 60vw;
 }
 
-.marquee {
-    -webkit-mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
-    mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
-    width: 98%;
-}
 
 /*character selection screen*/
 
@@ -69,3 +64,16 @@
     color: white;
 }
 
+#formContainer {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+@media only screen and (max-width: 800px) { 
+    .theForm {
+        scale: .8;
+        position: relative !important;
+        top: -80px !important;
+        left: -10px !important;
+    }
+}

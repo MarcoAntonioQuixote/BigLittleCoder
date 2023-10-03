@@ -12,7 +12,6 @@ const useInstructions = (next,specialValue) => {
         let paths = app.assigned.map(a => a.page);
         let isPagePath = paths.includes(path);
         if (!isPagePath) {
-            console.log('triggered here with path:', path)
             setApp({type: 'setPage',payload: path});
             setApp({type: 'setInstructions', payload: dynamicText(path)})
             return;

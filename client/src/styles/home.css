@@ -1,13 +1,14 @@
 #chatWithMonster {
     position: relative;
-    top: 12vh;
+    top: -10px;
     color: white;
     text-decoration: none;
     opacity: 1;
     padding: 10px;
-    font-size: 3.2rem;
+    font-size: clamp(17px,4vw,3.2rem);
     background-color: transparent;
     width: 80%;
+    height: 80%;
     resize: none;
     border: none;
 }
@@ -23,5 +24,21 @@
 }
 
 .instructions.convo {
-    top: 5vh;
+    top: -5vh;
+    width: min(500px,auto);
+    font-size: clamp(14px,2vw,30px);
+}
+
+@media only screen and (max-width: 800px) {
+
+    .instructions.convo {
+        width: 70vw;
+        top: -1vh;
+    }
+
+    #chatWithMonster {
+        top: 2vh;
+        height: 30vh;
+    }
+
 }

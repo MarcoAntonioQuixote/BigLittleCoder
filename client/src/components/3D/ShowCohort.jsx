@@ -8,8 +8,6 @@ function ShowCohort() {
 
     let otherMonsters = app.assigned.filter(a => a.page !== 'Cohorts').map((m,i) => ({type: 'select',name: m.speaker, index: i}));
 
-    console.log(otherMonsters);
-
     return (
         <>
             {otherMonsters.map(monster => <Monster key={monster.name} info={monster} />)}

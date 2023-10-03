@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function GlowCard({info, setOpen, openModal, doNothing}) {
+function GlowCard({info, doNothing}) {
 
     const navigate = useNavigate();
 
@@ -19,20 +19,15 @@ function GlowCard({info, setOpen, openModal, doNothing}) {
         )
     }
 
-    const openInformationModal = () => {
+    const openLink = () => {
         if (doNothing) return;
         navigate(info.link)
-        // if (!openModal) {
-        //     navigate('/contact');
-        //     return
-        // };
-        // setOpen(true);
     }
 
     return (
-        <div className="box">
+        <div className={`box ${info.video ? 'smText' : ''}`}>
             <span></span>
-            <div onClick={openInformationModal} className="content">
+            <div onClick={openLink} className="content">
                 <h2>{info.title}</h2>
                 <p>{info.text}</p>
                 {/* <a href="#">Read More</a> */}

@@ -70,7 +70,7 @@ export default function ContactForm() {
       <>      
         { sent ? <h2>Sent A-okay!</h2> :
 
-        <form style={{marginTop: '30px'}} >
+        <form className='theForm' style={{marginTop: '30px'}} >
             <FormControl className='formElement' required>
                 <Label>Name</Label>
                 <StyledInput name='name' onChange={handleChange} placeholder="What's your name?" />

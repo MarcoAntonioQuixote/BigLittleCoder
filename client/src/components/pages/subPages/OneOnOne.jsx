@@ -15,7 +15,7 @@ function OneOnOne() {
             </div>
 
             <br/>
-            <div style={{display: 'flex', justifyContent: 'space-around'}}>
+            <div className='infoButtons'>
                 <Link to='/cohorts'>
                     <Button variant='contained'>Cohorts</Button>
                 </Link>

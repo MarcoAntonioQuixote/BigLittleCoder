@@ -6,21 +6,21 @@ function Cohorts() {
     return (
         <div className='pageInSpeakerWindow staticPage'>
             <h3>Upcoming Cohorts:</h3>
-            <div className='cohortSelect'>
+            <h5 className='cohortSelect'>
                 <p>⭕ December: Mon & Wed at 7 PM PST</p>
-            </div>
-            <div className='cohortSelect'>
+            </h5>
+            <h5 className='cohortSelect'>
                 <p>⭕ February: Tue & Thu at 7 PM EST</p>
-            </div>
+            </h5>
             <p>📆 Cohorts run for 24 weeks</p>
             <p>⌚ Each class is 2 hours long and recorded</p>
             <p>✨ 1-on-1 mentor meetings included</p>
             <p>🧜🏽‍♂️ Take a dive into our <Link to='/TechStack' style={{color: '#ff00aa', fontWeight: 600}}>Tech Stack</Link>!</p>
             <p>💵 Total Price: <span style={{fontWeight: 600}}>$2400</span></p>
             <br />
-            <div style={{display: 'flex', justifyContent: 'space-around'}}>
+            <div className='infoButtons'>
                 <Link to='/1-on-1'>
-                    <Button variant='contained'>One on Ones</Button>
+                    <Button variant='contained'>1-on-1</Button>
                 </Link>
                 <Link to='/contact'>
                     <Button variant='contained' style={{backgroundColor: '#ff00aa'}}>Find out more</Button>

@@ -28,14 +28,14 @@ function MarkAnthony() {
     return (
         <div className='pageInSpeakerWindow align'>
             <div id='headerMA' className='MA-header'>
-                Mark Anthony | A Portfolio | Words Here
+                Mark Anthony | A Portfolio
             </div>
 
             <Marquee className='marquee' speed={125} >
                 {showTiles}
             </Marquee>
 
-            <div id='maLabels' style={{display: 'flex', justifyContent: 'space-around', width: '100%'}}>
+            <div id='maLabels' >
                 <span>passionate</span><span>ready to teach</span><span>eager to learn</span>
             </div>
             <Button className='fixSize button markAnthony' variant='text'>

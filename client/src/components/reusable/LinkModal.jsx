@@ -6,11 +6,6 @@ import Modal from '@mui/material/Modal';
 
 function LinkModal({open,setOpen}) {
 
-    useEffect(() => {
-        console.log(open);
-
-    },[open]);
-
     return (
         <Modal open={open} onClose={() => setOpen(false)}>
             <Box className='modal'>

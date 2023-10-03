@@ -43,20 +43,46 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    top: -20px;
 }
 
 .staticPage {
-    display: block;
-    /* flex-direction: column;
-    align-items: start; */
+    position: relative;
+    top: -5.5vh;
     text-align: start;
-    width: 90%;
-    padding: 5%;
-    font-size: 3vw;
-    border-radius: 16px;
-    background: rgba(0, 0, 0, 0.713);
+    padding: 50px;
+    padding-top: 30px;
+    font-size: clamp(11px,2.5vw,25px);
+}
+
+.infoButtons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0px;
+    right: 20px;
+    width: 350px;
 }
 
 .cohortSelect {
     margin: 20px;
+}
+
+@media only screen and (max-width: 800px) {
+
+	.aroundOnPage {
+        top: 0px;
+	}
+
+    .staticPage {
+        padding-top: 50px;
+    }
+
+    .infoButtons {
+        width: 100%;
+        right: 0px;
+        justify-content: space-around;
+        min-width: 270px;
+        scale: .95;
+    }
 }

@@ -3,9 +3,12 @@ import ContactForm from '../../ContactForm';
 
 function ContactMe() {
     return (
-        <div>
+        <>
+        <div id='formContainer'>
             <ContactForm />
+            <div className="arrow "></div>
         </div>
+        </>
     )
 }
 

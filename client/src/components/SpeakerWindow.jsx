@@ -11,7 +11,8 @@ function SpeakerWindow() {
 
         const [placement,setPlacement] = useState({});
         let onDarken = '';
-        if (page === 'TechStack' || page === 'Coaching') {
+        let pagesToDarken = ['TechStack','Coaching','cohorts','1-on-1']
+        if (pagesToDarken.includes(page)) {
             onDarken = 'darken'
         }
 

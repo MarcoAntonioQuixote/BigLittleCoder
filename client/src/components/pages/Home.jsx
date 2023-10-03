@@ -15,7 +15,7 @@ function Home() {
     useEffect(() => {
         let charNum = prompt.length;
         if (charNum === 0 && hasResponded) {
-            setApp({type: 'setInstructions', payload: 'Whoa'})
+            setApp({type: 'setInstructions', payload: dynamicText('loading')})
         } else if (charNum === 1) {
             setApp({type: 'setInstructions', payload: dynamicText('chatStart')})
         } else if (charNum === 100) {

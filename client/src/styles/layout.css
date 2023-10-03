@@ -66,7 +66,7 @@
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     border: 1px solid rgba(21, 21, 21, 0.3);
-    font-size: clamp(10px,3vw,40px);
+    font-size: clamp(10px,3vw,35px);
 }
 
 .instructions.started {
@@ -74,10 +74,29 @@
     width: min(700px,60vw);
 }
 
-.instructions.portfolio {
-    top: 38vh;
-}
-
 .instructions.noInstructions {
     display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .sceneContainer {
+        top: 10vh;    
+    }
+
+    .smScene {
+        width: 75%;
+    }
+
+    .expandedScene {
+        height: 90vh;
+    }
+
+    #charSelect {
+        margin: -20px;
+    }
+
+    .instructions.started {
+        top: 45vh;
+    }
 }

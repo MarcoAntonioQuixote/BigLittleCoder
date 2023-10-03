@@ -1,21 +1,9 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 import { OrbitControls, useTexture } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
 function World() {
-
-    function BackgroundWorld() {
-        const map = useTexture('textures/Digital_Painting_equirectangular-png_A_view_from_space_181339033.png');
-
-        return (
-            <mesh>
-                <ambientLight/>
-                <sphereGeometry args={[10,32,32]} />
-                <meshStandardMaterial map={map} side={THREE.BackSide}/>
-            </mesh>
-        )
-    }
 
     return (
         <Canvas>
@@ -30,3 +18,20 @@ function World() {
 }
 
 export default World
+
+const BackgroundWorld = React.memo((props) => {
+    const ref = useRef();
+    const map = useTexture('textures/Digital_Painting_equirectangular-png_A_view_from_space_181339033.png');
+
+    useFrame(({ clock }) => {
+        ref.current.rotation.y -= 0.0005;
+    })
+
+    return (
+        <mesh ref={ref}>
+            <ambientLight/>
+            <sphereGeometry args={[10,32,32]} />
+            <meshStandardMaterial map={map} side={THREE.BackSide}/>
+        </mesh>
+    )
+})

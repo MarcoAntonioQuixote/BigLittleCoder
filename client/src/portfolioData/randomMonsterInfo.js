@@ -30,6 +30,11 @@ let monsterOptions = {
         '1-on-1 sessions are a great way to do a deep dive into your specific needs!'
     ],
     contact: [], //no instructions on this page
+    loading: [
+        'Whoa',
+        "Let me think",
+        '...interesting',
+    ],
     chatStart: [
         'What do you want to chat about?',
         'Ooh, you do want to talk! 😎',
