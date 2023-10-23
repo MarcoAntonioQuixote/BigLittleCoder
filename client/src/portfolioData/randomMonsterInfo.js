@@ -15,7 +15,7 @@ let monsterOptions = {
         `What's in the stack? What are we learning?`
     ],
     Projects: [
-        `Our featured project uses Socket.IO! It only works if you play with a friend!`
+        `Play Explorio Party with a friend! Or try out this React 3D Demo!`
     ],
     MarkAnthony: [
         `He's a cool guy - he helped bring me and my friends to life! 🔥`

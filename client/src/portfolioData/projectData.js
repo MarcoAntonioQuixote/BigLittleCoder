@@ -45,5 +45,11 @@ export const projects = [
         tech: 'Socket.IO',
         link: 'https://explorioparty.netlify.app/',
         image: '/gifs/coder1.gif'
-    }
+    },
+    {
+        name: 'Great Balls of Fire',
+        tech: 'React Three Fiber',
+        link: 'https://blc-react-three-fiber.netlify.app/',
+        image: '/gifs/pokeGameGif.gif'
+    }, 
 ]
