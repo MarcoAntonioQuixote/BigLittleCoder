@@ -7,9 +7,12 @@ function Projects() {
     const showProjects = projects.map(p => <HoverCard info={p} key={p.name} />)
 
     return (
+        <>
         <div className='pageInSpeakerWindow aroundOnPage'>
             {showProjects}
         </div>
+        <div id='arrowTemp' className="arrow arrowHide"></div>
+        </>
     )
 }
 

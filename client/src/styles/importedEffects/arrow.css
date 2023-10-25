@@ -29,6 +29,12 @@
     animation-iteration-count: infinite;
     animation-name: arrow;
 }
+
+#arrowTemp {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
   
 @keyframes arrow {
     0% {

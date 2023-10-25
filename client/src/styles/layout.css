@@ -99,4 +99,9 @@
     .instructions.started {
         top: 45vh;
     }
+
+    .speakerWindow {
+        overflow: scroll;
+        padding-bottom: 30px;
+    }
 }
