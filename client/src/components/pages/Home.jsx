@@ -9,8 +9,9 @@ function Home() {
     const {setApp} = useContext(AppContext);
     const [prompt,setPrompt] = useState('');
     const [hasResponded, setHasResponded] = useState(false);
+    const [placement, setPlacement] = useState({});
     const executeChat = useOpenAI();
-    const buttonRef = useRef()
+    const buttonRef = useRef();
 
     useEffect(() => {
         let charNum = prompt.length;
@@ -24,6 +25,30 @@ function Home() {
             setApp({type: 'setInstructions', payload: dynamicText('chatEnd')})
         }
     }, [prompt]);
+
+    // useEffect(() => {
+
+    //     const relocateButton = () => {
+    //         const rect = document.getElementById('copyGlass');
+            
+    //         setPlacement({
+    //             position: `fixed`,
+    //             bottom: `0px`,
+    //             // left: `${rect.left}px`,
+    //             // width: `${rect.width}px`,
+    //             // height: `${rect.height}px`,
+    //         })
+    //     }
+
+    //     relocateButton();
+
+    //     window.addEventListener('resize', relocateButton);
+
+    //     return () => {
+    //         window.removeEventListener('resize', relocateButton);
+    //     }
+
+    // }, []);
 
     const handlePrompt = (e) => {
         setPrompt(e.target.value);
@@ -47,14 +72,14 @@ function Home() {
             <textarea type="text" 
                 placeholder={hasResponded ? '' : 'Ask me anything...'}
                 rows={6}
-                autoFocus
+                autoFocus={false}
                 maxLength={200}
                 onChange={handlePrompt}
                 value={prompt}
                 id='chatWithMonster'
             />
 
-            <Button ref={buttonRef} onClick={hasResponded ? reset : chatReq} className='fixSize button' variant='text'>
+            <Button ref={buttonRef} onClick={hasResponded ? reset : chatReq} className='fixSize button' variant='text' style={placement}>
                 {hasResponded ? 'Chat Again' : 'Chat'}
             </Button>
 

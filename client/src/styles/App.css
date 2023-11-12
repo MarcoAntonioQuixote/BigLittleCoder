@@ -99,3 +99,28 @@ a {
 	bottom: 200px;
 	right: 0px;
 }
+
+/*
+    changes include: 
+
+    * updating speaker window:
+         height to 50vh, 
+         updating top to 25vh;
+
+    * updated chatWithMonster
+        width: 90%;
+        height: 40vh;
+    
+    * fixSize.button top deleted
+        did this change anything else?
+
+        position: fixed;    //changed from absolute
+        bottom: 15px; //added 
+    
+    * chatWithMonster
+        font-size: clamp(17px,3vw,3.2rem); //4vw\
+
+    .instructions.started {
+        top: 45vh;
+    } removed ?? 40vh
+*/

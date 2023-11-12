@@ -22,7 +22,8 @@
     font-weight: 100;
     width: 100%;
     margin: auto;
-    margin-top: 5%;
+    /* margin-top: 5%; */
+    padding-top: 5%;
     position: relative;
 }
 

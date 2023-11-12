@@ -11,7 +11,7 @@ function OneOnOne() {
                 <p>🧑🏽‍🎨 Directly build out your portfolio</p>
                 <p>🧜🏽‍♂️ Expand your <Link to='/TechStack' style={{color: '#ff00aa', fontWeight: 600}}>Tech Stack</Link> the way you want</p>
                 <p>✏️ Write much better, cleaner code</p>
-                <p>💵 Total Price: <span style={{fontWeight: 600}}>$80/hr</span></p>
+                <p>💵 Total Price: <span style={{fontWeight: 600}}>$79/hr</span></p>
             </div>
 
             <br/>

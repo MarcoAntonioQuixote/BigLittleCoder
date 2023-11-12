@@ -51,8 +51,9 @@
 .fixSize.button {
     background-color: rgba(21, 21, 21, 0.35);
     color: white;
-    position: absolute;
-    top: 32.5vh;
+    position: fixed;
+    bottom: 15px;
+    /* top: 32.5vh; */
 }
 
 .fixSize.button.markAnthony {

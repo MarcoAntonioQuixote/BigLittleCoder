@@ -6,12 +6,15 @@ function SpeakerWindow() {
 
     const {app} = useContext(AppContext);
     const page = app.status.currentPage;
+    const [smWidth, setSmWidth] = useState(false);
+
 
     function SetGlass() {
 
         const [placement,setPlacement] = useState({});
-        let onDarken = '';
         let pagesToDarken = ['TechStack','Coaching','cohorts','1-on-1']
+        let mobilePages = ['TechStack','Coaching','cohorts','1-on-1',]
+        let onDarken = '';
         if (pagesToDarken.includes(page)) {
             onDarken = 'darken'
         }
@@ -21,6 +24,13 @@ function SpeakerWindow() {
             // TODO: why does this keep re-rendering console.log('re-running')
             
             const rect = document.getElementById('copyGlass').getBoundingClientRect();
+            const width = window.innerWidth;
+
+            if (width <= 800 && mobilePages.includes(page)) {
+                setSmWidth(true)
+            } else {
+                setSmWidth(false)
+            }
 
             setPlacement({
                 position: `fixed`,
@@ -47,7 +57,7 @@ function SpeakerWindow() {
 
     return (
     <>        
-        <div className='speakerWindow' id='copyGlass'>
+        <div className={`speakerWindow ${smWidth ? 'mobile' : ''}`} id='copyGlass'>
             <AppRoutes/>
         </div>
         <SetGlass />

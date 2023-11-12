@@ -49,7 +49,7 @@ export const projects = [
     {
         name: 'Great Balls of Fire',
         tech: 'React Three Fiber',
-        link: 'https://blc-react-three-fiber.netlify.app/',
+        link: 'https://biglittlecoder-r3f.netlify.app/',
         image: '/gifs/pokeGameGif.gif'
     }, 
 ]

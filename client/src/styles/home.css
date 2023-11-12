@@ -5,12 +5,14 @@
     text-decoration: none;
     opacity: 1;
     padding: 10px;
-    font-size: clamp(17px,4vw,3.2rem);
+    font-size: clamp(17px,3vw,3.2rem);
     background-color: transparent;
     width: 80%;
     height: 80%;
     resize: none;
     border: none;
+    width: 90%;
+    height: 40vh;
 }
 
 #chatWithMonster::placeholder {

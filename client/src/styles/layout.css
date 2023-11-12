@@ -18,11 +18,9 @@
     left: 0;
     align-items: center;
     font-size: 2rem;
-    /* border: solid red 4px; */
 }
 
 .canvas {
-    /* border: solid pink 2px; */
     pointer-events: none;
     z-index: 0;
 }
@@ -48,7 +46,11 @@
     transform: translateX(-50%);
     width: 80vw;
     height: 40vh;
+    min-height: 400px;
     border-radius: 16px;
+    border: solid green 2px;
+    top: 25vh;
+    /* height: 50vh; */
 }
 
 .instructions {
@@ -65,13 +67,14 @@
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
-    border: 1px solid rgba(21, 21, 21, 0.3);
+    border: 2px solid white;
     font-size: clamp(10px,3vw,35px);
 }
 
 .instructions.started {
-    top: 35vh;
+    top: 40vh;
     width: min(700px,60vw);
+    border: solid red 2px;
 }
 
 .instructions.noInstructions {
@@ -81,7 +84,7 @@
 @media only screen and (max-width: 800px) {
 
     .sceneContainer {
-        top: 10vh;    
+        top: 10vh;
     }
 
     .smScene {
@@ -102,6 +105,12 @@
 
     .speakerWindow {
         overflow: scroll;
-        padding-bottom: 30px;
+        padding-bottom: 30px;  
+        border: solid pink 2px;
+    }
+
+    .speakerWindow.mobile {
+        border: solid gold 2px;
+        top: 12vh;
     }
 }

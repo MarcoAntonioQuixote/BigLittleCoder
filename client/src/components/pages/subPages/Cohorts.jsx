@@ -16,7 +16,7 @@ function Cohorts() {
             <p>⌚ Each class is 2 hours long and recorded</p>
             <p>✨ 1-on-1 mentor meetings included</p>
             <p>🧜🏽‍♂️ Take a dive into our <Link to='/TechStack' style={{color: '#ff00aa', fontWeight: 600}}>Tech Stack</Link>!</p>
-            <p>💵 Total Price: <span style={{fontWeight: 600}}>$2400</span></p>
+            <p>💵 Total Price: <span style={{fontWeight: 600}}>$3200</span></p>
             <br />
             <div className='infoButtons'>
                 <Link to='/1-on-1'>
