@@ -37,7 +37,7 @@ function The3DCanvas() {
         </div>
         <>
             {app.secondCanvas.tracking && <SecondCanvas />}
-        </>
+        </> 
     </>
     )
 }

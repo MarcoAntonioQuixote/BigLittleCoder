@@ -5,7 +5,7 @@ let balls = [
 const portfolioTiles = [
     {
         image: '/textures/balls/model5.jpg',
-        text: <h2><span>Connect</span> with the 🌍, <span>whenever</span> and wherever you can </h2>,
+        text: <h2><span>Connect</span> with the 🌍, <span>wherever</span> you can </h2>,
     },
     {
         image: '/textures/balls/water5.jpg',

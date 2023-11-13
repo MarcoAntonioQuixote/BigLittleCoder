@@ -23,8 +23,15 @@
 }
 
 button.markAnthony {
-    position: relative !important;
-    top: 40px !important;
+    position: absolute !important;
+    top: 50vh !important;
+    height: 50px;
+}
+
+#mobileBtn {
+    position: relative;
+    top: 20px !important;
+    right: 20px;
 }
 
 .instructions.portfolio {
@@ -35,6 +42,7 @@ button.markAnthony {
     -webkit-mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
     mask-image: linear-gradient(to left, transparent, black 5%, black 95%, transparent);
     width: 98%;
+    height: 400px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -46,9 +54,6 @@ button.markAnthony {
     .balls3D {
         width: 90px;
         height: 90px;
-        top: 7vh !important;
-        left: 50% !important;
-        transform: translateX(-50%);
     }
 
     #maLabels {

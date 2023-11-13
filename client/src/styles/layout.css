@@ -46,9 +46,8 @@
     transform: translateX(-50%);
     width: 80vw;
     height: 40vh;
-    min-height: 400px;
+    min-height: 350px;
     border-radius: 16px;
-    border: solid green 2px;
     top: 25vh;
     /* height: 50vh; */
 }
@@ -68,13 +67,16 @@
     backdrop-filter: blur(7.9px);
     -webkit-backdrop-filter: blur(7.9px);
     border: 2px solid white;
-    font-size: clamp(10px,3vw,35px);
+    font-size: clamp(14px,3vw,35px);
 }
 
 .instructions.started {
     top: 40vh;
     width: min(700px,60vw);
-    border: solid red 2px;
+}
+
+.instructions.smallerFont {
+    font-size: 20px;
 }
 
 .instructions.noInstructions {
@@ -106,11 +108,5 @@
     .speakerWindow {
         overflow: scroll;
         padding-bottom: 30px;  
-        border: solid pink 2px;
-    }
-
-    .speakerWindow.mobile {
-        border: solid gold 2px;
-        top: 12vh;
     }
 }

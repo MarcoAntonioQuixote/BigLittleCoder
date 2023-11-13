@@ -25,6 +25,10 @@
 	border-radius: 10px;
 	overflow: hidden;
 }
+
+.gradHover.long {
+	max-height: 40vh;
+}
   
 .gradHoverImg {
     position: absolute;
@@ -44,6 +48,10 @@
 }
 
 .gradHover:hover {
+	background-position: 100% 100%;
+}
+
+.gradHover.hover {
 	background-position: 100% 100%;
 }
 

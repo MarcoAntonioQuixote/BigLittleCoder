@@ -10,15 +10,33 @@ function Instructions() {
 
     let instructions = app.instructions;
     let page = app.status.currentPage;
+    let type = app.dimensions.type;
     let reposition;
     let setMobile; //TODO remove later!
+    let smallerFont = ''
     
     switch(page) {
         case '': reposition = 'convo';
             break;
-        case 'MarkAnthony': reposition = 'portfolio';
-            break;
+        // case 'MarkAnthony': reposition = 'portfolio';
+        //     break;
         case 'contact' : reposition = 'noInstructions';
+            break;
+        case 'TechStack':
+        case 'Coaching':
+        case 'Projects':
+        case 'MarkAnthony':
+        case 'cohorts':
+        case '1-on-1':
+            if (type === 'standard') {
+                reposition = 'started';
+            }
+            if (type === 'mobile') {
+                setMobile = true;
+            }
+            if (type === 'long') {
+                smallerFont = 'smallerFont';
+            }            
             break;
         default: reposition = 'started';
             setMobile = true;
@@ -27,7 +45,7 @@ function Instructions() {
     if (!instructions) return null;
 
     return (    
-        <div className={`instructions ${reposition}`} id={setMobile ? 'instructions' : null}>
+        <div className={`instructions ${reposition} ${smallerFont}`} id='instructions'>
             <Typewriter
                 key={instructions}
                 words={[instructions]} 

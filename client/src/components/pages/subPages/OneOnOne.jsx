@@ -1,10 +1,20 @@
 import { Button } from '@mui/material';
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AppContext } from '../../../storeManagement/AppContext';
 
 function OneOnOne() {
+
+    const {app} = useContext(AppContext);
+    const {type} = app.dimensions;
+
+    const style = type !== 'long' ? {} : {
+        fontSize: '18px',
+        paddingTop: '100px'
+    }
+
     return (
-        <div className='pageInSpeakerWindow staticPage'>
+        <div className='pageInSpeakerWindow staticPage' style={style}>
             <h3>One on One Sessions:</h3>            
             <div className='cohortSelect'>
                 <p>🗓️ We meet on your time table</p>
@@ -15,7 +25,7 @@ function OneOnOne() {
             </div>
 
             <br/>
-            <div className='infoButtons'>
+            <div className={`infoButtons ${type === 'mobile' ? 'mobile' : ''}`} >
                 <Link to='/cohorts'>
                     <Button variant='contained'>Cohorts</Button>
                 </Link>

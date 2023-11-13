@@ -57,7 +57,8 @@ function SpeakerWindow() {
 
     return (
     <>        
-        <div className={`speakerWindow ${smWidth ? 'mobile' : ''}`} id='copyGlass'>
+        <div className={`speakerWindow`} id='copyGlass'>
+        {/* <div className={`speakerWindow ${smWidth ? 'mobile' : ''}`} id='copyGlass'> */}
             <AppRoutes/>
         </div>
         <SetGlass />

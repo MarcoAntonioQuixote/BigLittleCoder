@@ -1,5 +1,14 @@
 import { shuffleArray } from "../utilities/mathFunctions";
 
+let emojis = {
+    Fish: '🐟',
+    Vulpes: '🦊',
+    Toad: '🐸',
+    Tortoise: '🐢',
+    Cardinal: '🐦',
+    Bunny: '🐇'
+}
+
 const appReducer = (state,action) => {
     let newState = {...state};
     let {monster,load,children,status} = newState; //why did mode and instructions not work?
@@ -33,6 +42,8 @@ const appReducer = (state,action) => {
             }
             break;
         case 'setInstructions':
+            // const speaker = newState.status.next?.speaker;
+            // newState.instructions = `${speaker ? `${emojis[speaker]}:` : ''} ${payload}`;
             newState.instructions = payload;
             break;
         case 'setPage':
@@ -54,8 +65,11 @@ const appReducer = (state,action) => {
         case 'track':
             newState.secondCanvas.tracking = payload; //like balls
             break;
+        case 'dimensions':
+            newState.dimensions = payload;
+            break;
         }
-        console.log(newState.status.currentPage);
+        // console.log(newState.status.currentPage);
         return newState;
 }
 

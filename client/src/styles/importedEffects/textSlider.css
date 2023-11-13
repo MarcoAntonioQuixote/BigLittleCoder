@@ -6,7 +6,7 @@ figure.snip0016 {
   margin: 10px;
   min-width: 220px;
   max-width: 310px;
-  max-height: 220px;
+  /* max-height: 220px; */
   width: 100%;
   background: #000000;
   text-align: left;
@@ -99,10 +99,35 @@ figure.snip0016:hover figcaption::before {
   transition-delay: 0s;
 }
 
+figure.snip0016:focus img {
+  opacity: 0.3;
+}
+figure.snip0016:focus figcaption h2 {
+  opacity: 1;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+figure.snip0016:focus figcaption p {
+  opacity: 0.9;
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip0016:focus figcaption::before {
+  background: rgba(255, 255, 255, 0);
+  left: 30px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
 .captionTile {
 	max-width: 100%;
 	width: 33vw;
-	height: 20vh;
+	height: 30vh;
 	opacity: 1;
 	/* width: 100%; */
 	object-fit: cover;
@@ -115,6 +140,6 @@ figure.snip0016:hover figcaption::before {
 @media only screen and (max-width: 800px) {
   figure.snip0016 h2 {
     font-size: 16px;
-    padding-left: 20px;
+    padding-left: 30px;
   }
 }

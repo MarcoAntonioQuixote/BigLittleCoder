@@ -44,12 +44,21 @@ export const projects = [
         name: 'Explorio Party',
         tech: 'Socket.IO',
         link: 'https://explorioparty.netlify.app/',
-        image: '/gifs/coder1.gif'
+        image: '/gifs/coder1.gif',
+        description: "Play against your friends. They'll need their own device!"
     },
     {
         name: 'Great Balls of Fire',
         tech: 'React Three Fiber',
         link: 'https://biglittlecoder-r3f.netlify.app/',
-        image: '/gifs/pokeGameGif.gif'
-    }, 
+        image: '/gifs/pokeGameGif.gif',
+        description: "Can you knock off all 151?"
+    },
+    {
+        name: 'Simon Smiles',
+        tech: 'React Three Fiber',
+        link: 'https://biglittlecoder-r3f.netlify.app/',
+        image: 'https://media2.giphy.com/media/1wnZSnmrnwJmnJkd1c/giphy.gif?cid=ecf05e47l6p2puc4qg4vx33qt6be9mp1lth5zeg7tgl38t8z&ep=v1_gifs_related&rid=giphy.gif&ct=g',
+        description: 'Turn on your camera and repeat after Simon!'
+    },  
 ]

@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import GlowCard from '../reusable/GlowCard';
 import { coachingOptions } from '../../portfolioData/markAnthonyBalls';
+import { AppContext } from '../../storeManagement/AppContext';
 
 function Coaching() {
 
-    // useEffect(() => {
-    //     setApp({type: 'track', payload: 'cohort'});
-    //     return () => {
-    //         setApp({type: 'track', payload: null});
-    //     }
-    // },[]);
+    const {app, setApp} = useContext(AppContext);
+    const {type} = app.dimensions;
 
-    const showTiles = coachingOptions.map((option,i) => <GlowCard key={i} info={option}/>)
+    const mouseEnter = () => {
+        setApp({type: 'setInstructions', payload: 'Click for more info!'})
+    }
+
+    const mouseLeave = () => {
+        setApp({type: 'setInstructions', payload: 'Want to learn in a group setting? Or 1-on-1?'})
+    }
+
+    const showTiles = coachingOptions.map((option,i) => <GlowCard key={i} info={option} type={type} actions={{mouseEnter,mouseLeave}}/>)
 
     return (
         <>        

@@ -8,7 +8,8 @@ import { Link } from 'react-router-dom';
 
 function MarkAnthony() {
 
-    const {setApp} = useContext(AppContext);
+    const {app,setApp} = useContext(AppContext);
+    const {type} = app.dimensions;
 
     //TODO all of these that you'r tracking, you could just define a beter hook yourself - tsk tsk
 
@@ -26,24 +27,20 @@ function MarkAnthony() {
     })
 
     return (
-        <div className='pageInSpeakerWindow align'>
-            <div id='headerMA' className='MA-header'>
-                Mark Anthony | A Portfolio
-            </div>
+        <div className='pageInSpeakerWindow align' id='placeBall'>
 
             <Marquee className='marquee' speed={125} >
                 {showTiles}
             </Marquee>
 
-            <div id='maLabels' >
+            {/* <div id='maLabels' >
                 <span>passionate</span><span>ready to teach</span><span>eager to learn</span>
-            </div>
-            <Button className='fixSize button markAnthony' variant='text'>
+            </div> */}
+            <Button className={`fixSize button markAnthony`} variant='text' id={`${type === 'mobile' ? 'mobileBtn' : ''}`}>
                 <Link to='/contact'>
                     Contact
                 </Link>
             </Button>
-        
         </div>
     )
 }

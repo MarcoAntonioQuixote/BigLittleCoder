@@ -33,8 +33,17 @@ export const appObject =
     ],
     secondCanvas: {
         tracking: null, //this will be all you have to set
-        balls: 'headerMA', //other key-value pairs to track
+        balls: 'placeBall', //other key-value pairs to track
         cohort: 'copyGlass',
+    },
+    dimensions: {
+        w: undefined,
+        h: undefined,
+        ratio: undefined,
+        type: null, 
+            //mobile w < 800, 
+            //long 16:9, 
+            //standard (not long, but landscape)
     }
 };
 
