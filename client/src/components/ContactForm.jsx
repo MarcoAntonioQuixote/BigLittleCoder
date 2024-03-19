@@ -29,27 +29,31 @@ export default function ContactForm() {
         
         const namePattern = /^[a-zA-Z-.\s]{2,25}$/;
         if (!namePattern.test(data.name)) {
-            errors.push('name');
+            errors.push("Don't forget your name!");
         }
         
         const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         if (!emailPattern.test(data.email) || (data.email && data.email.length > 35)) {
-            errors.push('email');
+            errors.push('Email invalid');
         }
         
         if (!data.message || data.message.length < 15) {
-            errors.push('message');
+            errors.push('Message is too short');
         }
         
         const phonePattern = /^(\+\d{1,2}\s?)?(1\s?)?(\()?\d{3}(\))?[.-\s]?\d{3}[.-\s]?\d{4}$/;
 
 
         if (!phonePattern.test(data.phone)) {
-            errors.push('phone');
+            errors.push('Phone number invalid');
         }
 
         if (errors.length) {
-            console.log(errors);
+            let problems = "";
+            for (let error of errors) {
+              problems += `${error} \n`
+            }
+            alert(`There were some problems: \n ${problems}`)
             return errors;
         } else {
             let individual = data.individual ? true : false;
@@ -90,6 +94,7 @@ export default function ContactForm() {
                 <Label>Interested in</Label>
                 <FormControlLabel className='fixSize' name='cohorts' onChange={handleChange} control={<Checkbox size='large'/>} label="Cohorts" />
                 <FormControlLabel className='fixSize' name='individual' onChange={handleChange} control={<Checkbox size='large'/>} label="1-on-1" />
+                <FormControlLabel className='fixSize' name='freeDemo' onChange={handleChange} control={<Checkbox size='large'/>} label="Free Demo" />
             </FormControl> 
             <FormControl className='formElement' required>
                 <Label>Message</Label>

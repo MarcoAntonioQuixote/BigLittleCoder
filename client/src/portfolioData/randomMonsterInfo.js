@@ -69,7 +69,8 @@ let monsterOptions = {
         'What do you want to chat about?',
     ],
     landing: [
-        "I'm glad to see ya here! 🔥"
+        "I'm glad to see ya here! 🔥",
+        "Ah, so you want to know more?"
     ],
     oops: [
         "Looks like there's been a mistake. You came here for "

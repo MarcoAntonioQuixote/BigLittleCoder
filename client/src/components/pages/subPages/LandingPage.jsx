@@ -1,8 +1,12 @@
 import React from 'react'
+import ContactForm from '../../ContactForm'
 
 function LandingPage() {
   return (
-    <div>Interested in a free demo?</div>
+    <div id='formContainer' style={{paddingBottom: '70px'}}>
+        Interested in a free demo?
+        <ContactForm />
+    </div>
   )
 }
 

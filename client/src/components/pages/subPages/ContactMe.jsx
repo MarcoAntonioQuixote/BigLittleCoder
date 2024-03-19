@@ -4,7 +4,7 @@ import ContactForm from '../../ContactForm';
 function ContactMe() {
     return (
         <>
-        <div id='formContainer'>
+        <div id='formContainer' style={{paddingBottom: '70px'}}>
             <ContactForm />
             <div className="arrow "></div>
         </div>
