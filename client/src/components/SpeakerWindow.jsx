@@ -68,4 +68,3 @@ function SpeakerWindow() {
 
 export default SpeakerWindow
 
-
