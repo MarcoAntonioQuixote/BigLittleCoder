@@ -17,10 +17,13 @@ function Cohorts() {
         <div className='pageInSpeakerWindow staticPage' style={style}>
             <h3>Upcoming Cohorts:</h3>
             <h5 className='cohortSelect'>
-                <span>⭕ December: Mon & Wed at 7 PM PST</span>
+                <span>⭕ April 22nd: Mon, Wed, Thu at 7 PM GMT (UK)</span>
             </h5>
             <h5 className='cohortSelect'>
-                <span>⭕ February: Tue & Thu at 7 PM EST</span>
+                <span>⭕ April 22nd: Mon, Wed, Thu at 7 PM EST (US)</span>
+            </h5>
+            <h5 className='cohortSelect'>
+                <span>⭕ June 17th: Mon, Wed, Thu at 7 PM PST (UK)</span>
             </h5>
             <p>📆 Cohorts run for 24 weeks</p>
             <p>⌚ Each class is 2 hours long and recorded</p>

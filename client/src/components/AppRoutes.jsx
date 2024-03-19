@@ -9,6 +9,7 @@ import Home from './pages/Home';
 import ContactMe from './pages/subPages/ContactMe';
 import Cohorts from './pages/subPages/Cohorts';
 import OneOnOne from './pages/subPages/OneOnOne';
+import LandingPage from './pages/subPages/LandingPage';
 
 function AppRoutes() {
     return (
@@ -21,6 +22,7 @@ function AppRoutes() {
             <Route path='/contact' element={<ContactMe/>} />
             <Route path='/cohorts' element={ <Cohorts /> } />
             <Route path='/1-on-1' element={ <OneOnOne /> } />
+            <Route path='/landing' element={<LandingPage />} />
         </Routes>
     )
 }
