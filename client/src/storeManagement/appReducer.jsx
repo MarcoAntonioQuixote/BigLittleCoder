@@ -24,6 +24,7 @@ const appReducer = (state,action) => {
         case 'selectMode':
             status.mode = payload;
             if (payload === 'speaker') {
+                console.log('OldS', newState)
                 let others = load.characters.filter(c => c !== monster.name);
                 monster.others = shuffleArray(others);
                 children[0] = { ...children[0],
@@ -39,6 +40,7 @@ const appReducer = (state,action) => {
                 status.started = true;
                 newState.assigned = newState.assigned.map((c,i) => ({...c, speaker: monster.others[i]}));
                 status.transitioning = true;
+                console.log('NewS', newState)
             }
             break;
         case 'setInstructions':
@@ -51,7 +53,8 @@ const appReducer = (state,action) => {
             break;
         case 'goToPage':
             status.currentPage = payload;
-            let newMon = newState.assigned.find(a => a.page === payload);
+            let newMon = newState.assigned.find(a => a.page.toLowerCase() === payload.toLowerCase());
+            newMon = newMon ? newMon : newState.assigned[0];
             status.next = newMon;
             status.transitioning = true;
             break;

@@ -6,7 +6,7 @@ function LRScrollSelection({children}) {
 
     const {app,setApp} = useContext(AppContext);
     const selection = app.monster.name;
-    const mode = app.status.mode;
+    const {mode, currentPage} = app.status;
 
     if (mode !== 'selection') return (<>{children}</>);
 
@@ -23,6 +23,14 @@ function LRScrollSelection({children}) {
 
     const select = () => {
         setApp({type: 'selectMode', payload: 'speaker'})
+    }
+
+    if (currentPage) {
+        setTimeout(() => {
+            setApp({type: 'selectMode', payload: 'speaker'})
+            setApp({type: 'goToPage', payload: currentPage});
+            
+        },200);
     }
 
     return (

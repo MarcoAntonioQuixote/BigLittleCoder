@@ -12,14 +12,14 @@ function MoreInfoModal({open,setOpen, modalFor}) {
                 <Typography id="modal-modal-title" variant="h6" component="h2">
                     <p>Awesome! I'm excited you're interested in our Big Little Coder Cohort! </p>
                     <br/>
-                    <p>Cohorts meet 3x a week on M|W at 7 pm for 2.5 hours in Eastern and Pacific Time Zones. Additional mentor meetings are included in the price of the 24 week course:</p>
+                    <p>Cohorts meet 3x a week on M|W|Th at 7 pm for 2 hours in UK, Eastern, and Pacific Time Zones. Additional mentor meetings are included in the price of the 24 week course:</p>
                     <br/>
                     <p>$3299</p> <br />
 
                     The next cohorts available are: <br/>
 
-                    <p>November</p>
-                    <p>January</p> <br />
+                    <p>April</p>
+                    <p>June</p> <br />
 
                     Check out more information on the <Link to='/TechStack' style={{color: '#ff00aa'}}>Tech Stack</Link>!
                     

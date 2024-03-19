@@ -6,11 +6,13 @@ import dynamicText from "../portfolioData/randomMonsterInfo";
 const useInstructions = (next,specialValue) => {
     const {app,setApp} = useContext(AppContext);
     let location = useLocation();
+
     
     useEffect(() => {
         let path = location.pathname.slice(1);
         let paths = app.assigned.map(a => a.page);
         let isPagePath = paths.includes(path);
+        console.log(path,app.status.currentPage);
         if (!isPagePath) {
             setApp({type: 'setPage',payload: path});
             setApp({type: 'setInstructions', payload: dynamicText(path)})
