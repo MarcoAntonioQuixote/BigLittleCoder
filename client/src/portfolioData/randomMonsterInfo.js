@@ -4,20 +4,20 @@ let monsterOptions = {
     selection: [
         `Which Big Little Coder are You?`
     ],
-    Home: [
+    home: [
         `Big Little Coder helps you dream big with little baby steps along the way. 👟`,
         `Big Little Coder is here to help awaken the coder inside of you.`
     ],
-    Coaching: [
+    coaching: [
         'Want to learn in a group setting? Or 1-on-1?'
     ],
-    TechStack: [
+    techstack: [
         `What's in the stack? What are we learning?`
     ],
-    Projects: [
+    projects: [
         `Play Explorio Party with a friend! Or try out this React 3D Demo!`
     ],
-    MarkAnthony: [
+    markanthony: [
         `He's a cool guy - he helped bring me and my friends to life! 🔥`
     ],
     cohorts: [
@@ -35,7 +35,7 @@ let monsterOptions = {
         "Let me think",
         '...interesting',
     ],
-    chatStart: [
+    chatstart: [
         'What do you want to chat about?',
         'Ooh, you do want to talk! 😎',
         "Awesome, I'm all ears... 👂🏽",
@@ -43,13 +43,13 @@ let monsterOptions = {
         "I see you've started. What's up?",
         "You've got my attention! 🌟"
     ],
-    chatHalfway: [
+    chathalfway: [
         "Whoa, you don't say?",
         "Quite the set up...",
         "This is going somewhere good 😀",
         "I think I see where this is going 🤙🏽"
     ],
-    chatEnd: [
+    chatend: [
         "Whoa, I'm just a little animal. That's quite a lot!",
         "Space is running out!",
         "Whoa, that's a lot! 😳",
@@ -58,7 +58,7 @@ let monsterOptions = {
         "Keep it short, buddy!",
         "Slow down, you're almost out of room!"
     ],
-    chatReset: [
+    chatreset: [
         "Ahh, how the tables have turned yet again.",
         "Whoa, this again! 😊",
         "Whoa, this again?",
@@ -67,12 +67,22 @@ let monsterOptions = {
         "Reset button hit. Let's go again! 🎉",
         "New convo, who dis?",
         'What do you want to chat about?',
+    ],
+    landing: [
+        "I'm glad to see ya here! 🔥"
+    ],
+    oops: [
+        "Looks like there's been a mistake. You came here for "
     ]
 }
 
 function dynamicText(topic) {
-    let i = randomNum(0,monsterOptions[topic].length - 1);
-    return monsterOptions[topic][i];
+    
+    topic = topic.toLowerCase();
+    let prop = monsterOptions[topic];
+    let i = randomNum(0,prop?.length - 1);
+    let response = prop ? prop[i] : `${monsterOptions['oops'][0]} ${topic}?`;
+    return response;
 }
 
 export default dynamicText;
