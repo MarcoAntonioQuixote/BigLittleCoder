@@ -2,7 +2,7 @@
 
 ### Helping students elevate their coding skills through collaborative learning and guided mentorship 🚀
 
-To find out more, visit: [BigLittleCoder](https://www.biglittlecoder.com)
+To find out more, and to see our live site, visit: [BigLittleCoder](https://www.biglittlecoder.com)
 
 In this portfolio you'll find two directories - one for the front and backend. 
 
