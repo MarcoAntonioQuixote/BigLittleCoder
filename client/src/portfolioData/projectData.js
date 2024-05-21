@@ -40,13 +40,13 @@ const oldP = [
 ]
 
 export const projects = [
-    {
-        name: 'Explorio Party',
-        tech: 'Socket.IO',
-        link: 'https://explorioparty.netlify.app/',
-        image: '/gifs/coder1.gif',
-        description: "Play against your friends. They'll need their own device!"
-    },
+    // {
+    //     name: 'Explorio Party',
+    //     tech: 'Socket.IO',
+    //     link: 'https://explorioparty.netlify.app/',
+    //     image: '/gifs/coder1.gif',
+    //     description: "Play against your friends. They'll need their own device!"
+    // },
     {
         name: 'Great Balls of Fire',
         tech: 'React Three Fiber',
